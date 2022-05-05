@@ -1,0 +1,116 @@
+.main-conocenos {
+    background-color: #1e1e1e;
+    height: calc(100vh - 118px);
+    min-height: 1530px;
+    .gradient {
+        display: none;
+    }
+    div {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        article {
+            h1 {
+                font-size: 1.5rem;
+                color: #ffffff;
+                text-shadow: 3px 2px black;
+                margin-bottom: 30px;
+            }
+            img {
+                padding: 16px;
+                height: 300px;
+                width: auto;
+                margin: 12px 0;
+                filter: drop-shadow(2px 4px 4px #000000);
+            }
+            p {
+                font-size: 1rem;
+                color: #ffffffd4;
+                padding: 12px;
+                margin-bottom: 0;
+            }
+        }
+        .about-dates {
+            div {
+                background-color: #3c3c3c;
+                h2 {
+                    font-size: 1rem;
+                    color: #94d56cd9;
+                }
+                p {
+                    font-size: .8rem;
+                    color: #ffffffd4;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}  
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    .main-conocenos {
+        height: calc(100vh - 118px);
+        min-height: 1030px;
+        line-height: initial;
+        div {
+            article {
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                    border-radius: 10px;
+                }
+            }
+            .about-dates {
+                div {
+                    border-radius: 10px;
+                    width: fit-content;
+                    min-width: 250px;
+                    height: 76px;
+                    padding: 2px;
+                    h2 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .main-conocenos {
+        height: calc(100vh - 118px);
+        min-height: 950px;
+        line-height: initial;
+        div {
+            article {
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    width: 90%;
+                }
+            }
+            .about-dates {
+                div {
+                    border-radius: 10px;
+                    width: fit-content;
+                    min-width: 210px;
+                    height: 94px;
+                    padding: 8px;
+                    h2 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}

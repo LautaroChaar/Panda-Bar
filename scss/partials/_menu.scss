@@ -1,0 +1,356 @@
+.main-menu {
+    background-color: #1e1e1e;
+    height: calc(100vh - 118px);
+    min-height: 1715px;
+    .gradient {
+        display: none;
+    }
+    div {
+        h1 {
+            font-size: 2rem;
+            text-shadow: 3px 2px #000000;
+            color: #ffffff;
+            font-weight: bold;
+            span {
+                display: contents;
+                color: #ffffff;
+                font-weight: bold;
+            }
+        }
+        section {
+            padding: 0 12px 12px 12px;
+            width: 100vw;
+            .starters-bg {
+                background-image: url(../imagen/entradas.png);
+                background-position: center center;
+                h2 {
+                    color: #ffffffd4;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            .burgers-bg {
+                background-image: url(../imagen/hamburguesa.png);
+                background-position: center center;
+                h2 {
+                    color: #040404c7;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            .pizzas-bg {
+                background-image: url(../imagen/pizza.png);
+                background-position: center center;
+                h2 {
+                    color: #ffffffd4;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            .desserts-bg {
+                background-image: url(../imagen/postres.png);
+                background-position: center center;
+                h2 {
+                    color: #ffffffd4;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            .drinks-bg {
+                background-image: url(../imagen/tragos.png);
+                background-position: center center;
+                h2 {
+                    color: #040404c7;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            .beer-bg {
+                background-image: url(../imagen/cerveza.png);
+                background-position: center center;
+                h2 {
+                    color: #ffffffd4;
+                    text-shadow: none;
+                    font-weight: bold;
+                }
+            }
+            div {
+                background-size: cover;
+                height: 270px;
+                &:hover h2 {
+                    display: none;
+                }
+                &:hover div {
+                    display: flex;
+                    opacity: .9;
+                }
+                &:hover div ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: none;
+                    font-size: .8rem;
+                    width: 100%;
+                    line-height: 26px;
+                    padding: 0;
+                    margin: 0;
+                }
+                h2 {
+                    font-size: 1.8rem;
+                    text-shadow: 3px 2px black;
+                }
+                div {
+                    display: contents;
+                    background-color: black;
+                    opacity: 0;
+                    transition: opacity .8s;
+                    height: 100%;
+                    width: 100%;
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    .main-menu {
+        height: calc(100vh - 118px);
+        min-height: 756px;
+        background-color: transparent;
+        .gradient {
+            display: block;
+            position: absolute;
+            height: calc(100vh - 118px);
+            min-height: 756px;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-1 {
+            background-color: #101010;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-2 {
+            background-color: #c7c7c7;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-3 {
+            background-color: #c7c7c7;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-4 {
+            background-color: #101010;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        div {
+            h1 {
+                font-size: 3rem;
+                letter-spacing: 14px;
+                color: #101010;
+                text-shadow: none;
+                font-weight: bold;
+                span {
+                    display: contents;
+                    color: #c7c7c7;
+                    font-weight: bold;
+                }
+            }
+            section {
+                width: 100%;
+                max-width: 650px;
+                padding: 0;
+                border: 4px solid #6c6c6c;
+                border-radius: 10px;
+                .starters-bg {
+                    background-size: contain;
+                }
+                .burgers-bg {
+                    background-size: contain;
+                }
+                .pizzas-bg {
+                    background-size: contain;
+                }
+                .desserts-bg {
+                    background-size: contain;
+                }
+                .drinks-bg {
+                    background-size: contain;
+                }
+                .beer-bg {
+                    background-size: contain;
+                }
+                div {
+                    height: 220px;
+                }
+                .starters-menu {
+                    border-top-left-radius: 5px;
+                    div {
+                        border-top-left-radius: 5px;
+                    }
+                }
+                .burgers-menu {
+                    border-top-right-radius: 5px;
+                    div {
+                        border-top-right-radius: 5px;
+                    }
+                }
+                .drinks-menu {
+                    border-bottom-left-radius: 5px;
+                    div {
+                        border-bottom-left-radius: 5px;
+                    }
+                }
+                .beer-menu {
+                    border-bottom-right-radius: 5px;
+                    div {
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .main-menu {
+        height: calc(100vh - 118px);
+        min-height: 644px;
+        background-color: transparent;
+        .gradient {
+            display: block;
+            position: absolute;
+            height: calc(100vh - 118px);
+            min-height: 644px;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-1 {
+            background: linear-gradient(-45deg, #c7c7c7 43%, #101010 43%);
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-2 {
+            background: linear-gradient(-135deg, #101010 43%, #c7c7c7 43%);
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-3 {
+            background: linear-gradient(45deg, #101010 43%, #c7c7c7 43%);
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        .gradient-4 {
+            background: linear-gradient(135deg, #c7c7c7 43%, #101010 43%);
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            padding: 0;
+        }
+        div {
+            h1 {
+                font-size: 3rem;
+                letter-spacing: 14px;
+                font-weight: bold;
+                color: #c7c7c7;
+                text-shadow: none;
+                span {
+                    display: contents;
+                    color: #101010;
+                    font-weight: bolder;
+                }
+            }
+            section {
+                width: 100%;
+                max-width: 1140px;
+                padding: 0;
+                border: 4px solid #6c6c6c;
+                border-radius: 10px;
+                .starters-bg {
+                    background-size: contain;
+                }
+                .burgers-bg {
+                    background-size: contain;
+                }
+                .pizzas-bg {
+                    background-size: contain;
+                }
+                .desserts-bg {
+                    background-size: contain;
+                }
+                .drinks-bg {
+                    background-size: contain;
+                }
+                .beer-bg {
+                    background-size: contain;
+                }
+                div {
+                    height: 256px;
+                    &:hover div ul {
+                        font-size: 1rem;
+                    }
+                }
+                .starters-menu {
+                    border-top-left-radius: 5px;
+                    div {
+                        border-top-left-radius: 5px;
+                    }
+                }
+                .pizzas-menu {
+                    border-top-right-radius: 5px;
+                    div {
+                        border-top-right-radius: 5px;
+                    }
+                }
+                .desserts-menu {
+                    border-bottom-left-radius: 5px;
+                    div {
+                        border-bottom-left-radius: 5px;
+                    }
+                }
+                .beer-menu {
+                    border-bottom-right-radius: 5px;
+                    div {
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

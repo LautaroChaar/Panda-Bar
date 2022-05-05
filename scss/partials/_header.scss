@@ -1,0 +1,116 @@
+.header-box {
+    background-image: url(../imagen/encabezado1.jpg);
+    background-size: cover;
+    border-bottom: 6px solid #000000;
+    nav {
+        div {
+            .desktop-icon {
+                width: 30px;
+            }
+            button {
+                border: 2px solid #000000;
+                &:focus {
+                    border: none;
+                }
+                span {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0,0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                }
+            }
+            div {
+                position: fixed;
+                top: 0;
+                left: -12px;
+                width: 45%;
+                z-index: 1;
+                background-color: #101010;
+                height: 100vh;
+                
+                ul {
+                    height: 100vh;
+                    li {
+                        height: 20%;
+                        border-bottom: 4px solid #94d56cd9;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:last-of-type {
+                            border: none;
+                        }
+                        a {
+                            font-size: .8rem;
+                            color: #ffffffd4;
+                            &:hover {
+                                color: #94d56cd9;
+                            }
+                        }                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    .header-box {
+        nav {
+            div {
+                div {
+                    ul {
+                        li {
+                            a {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (min-width:992px) {
+    .header-box {
+        background-image: none;
+        background-color: #ffffff;
+        nav{
+            div {
+                div {
+                    position:inherit;
+                    width: 100%;
+                    z-index: 0;
+                    background-color: transparent;
+                    height: auto;
+                    min-height: 0;
+                    ul {
+                        height: auto;
+                        min-height: 0;
+                        li {
+                            border: none;
+                            height: auto;
+                            a {
+                                font-size: 1.3rem;
+                                animation-name: header;
+                                animation-duration: .3s;
+                                animation-iteration-count: 1;
+                                animation-fill-mode: forwards;
+                                position: relative;
+                                top: -100px;
+                                height: 100%;
+                                color: #101010;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes header {
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 0;
+    }
+}

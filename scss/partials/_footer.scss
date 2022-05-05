@@ -1,0 +1,24 @@
+.nav__list {
+    list-style: none;
+    li {
+        .logo-instagram::before {
+            content: url(../imagen/instagram5.png);
+        }
+        .logo-facebook::before {
+            content: url(../imagen/facebook-.png);
+        }
+        .logo-twitter::before {
+            content: url(../imagen/gorjeo.png);
+        }
+    }
+}
+
+footer {
+    div{
+        p {
+        margin: 0;
+        color: #dedede;
+        font-size: .5rem;
+        }
+    }
+}
