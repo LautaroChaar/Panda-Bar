@@ -1,44 +1,39 @@
+@import "mixins";
+@import "extends";
+@import "maps";
+
 .main-conocenos {
-    background-color: #1e1e1e;
-    height: calc(100vh - 118px);
-    min-height: 1530px;
-    .gradient {
-        display: none;
-    }
+    @include conocenos;
     div {
         padding-top: 12px;
         padding-bottom: 12px;
         article {
             h1 {
                 font-size: 1.5rem;
-                color: #ffffff;
-                text-shadow: 3px 2px black;
+                color: $h1color;
+                text-shadow: $textshadow;
                 margin-bottom: 30px;
             }
             img {
-                padding: 16px;
-                height: 300px;
-                width: auto;
-                margin: 12px 0;
-                filter: drop-shadow(2px 4px 4px #000000);
+                @include conocenosimg
             }
             p {
                 font-size: 1rem;
-                color: #ffffffd4;
+                color: $tcwhite;
                 padding: 12px;
                 margin-bottom: 0;
             }
         }
         .about-dates {
             div {
-                background-color: #3c3c3c;
+                background-color: $bgtext;
                 h2 {
                     font-size: 1rem;
-                    color: #94d56cd9;
+                    color: $green;
                 }
                 p {
                     font-size: .8rem;
-                    color: #ffffffd4;
+                    color: $tcwhite;
                     font-weight: 500;
                 }
             }

@@ -1,5 +1,9 @@
+@import "mixins";
+@import "extends";
+@import "maps";
+
 .main-rye {
-    background-color: #1e1e1e;
+    background-color: $bgblack;
     height: calc(100vh - 118px);
     min-height: 1225px;
     .gradient {
@@ -7,8 +11,8 @@
     }
     div {
         section {
-            border: 6px double #94d56cd9;
-            background-color: #101010;
+            border: 6px double $green;
+            background-color: $black;
             margin: 10px 0;
             width: 410px;
             form {
@@ -16,32 +20,18 @@
                 div {
                     div {
                         p {
-                            color: #ffffffd4;
+                            color: $tcwhite;
                         }
                     }
                     div {
                         label {
-                            color: #94d56cd9;
-                            font-size: .8rem;
+                            @include label;
                         }
                         input {
-                            border: transparent;
-                            border-radius: 3px;
-                            font-size: .8rem;
-                            max-width: 185px;
-                            background-image: linear-gradient(to top, #34313161, #ffffffd4);
+                            @include input;
                         }
                         button {
-                            border-radius: 8px;
-                            background-color: #101010;
-                            color: #94d56cd9;
-                            font-size: .8rem;
-                            border: 2px outset #94d56cd9;
-                            cursor: pointer;
-                            &:active {
-                                background-color: #94d56cd9;
-                                color: #101010;
-                            }
+                            @include button;
                         }
                     }
                 }
@@ -56,55 +46,33 @@
         min-height: 680px;
         background-color: transparent;
         .gradient {
-            display: block;
-            position: absolute;
-            height: calc(100vh - 118px);
+            @include grad;
             min-height: 680px;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-1 {
-            background-color: #101010;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-2 {
-            background-color: #c7c7c7;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-3 {
-            background-color: #c7c7c7;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            right: 0;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-4 {
-            background-color: #101010;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-            padding: 0;
+            .gradient-1 {
+                background-color: #101010;
+                @include gradchild;
+            }
+            .gradient-2 {
+                background-color: #c7c7c7;
+                @include gradchild;
+                bottom: 0;
+            }
+            .gradient-3 {
+                background-color: #c7c7c7;
+                @include gradchild;
+                right: 0;
+            }
+            .gradient-4 {
+                background-color: #101010;
+                @include gradchild;
+                bottom: 0;
+                right: 0;
+            }
         }
         div {
             section {
-                height: fit-content;
-                width: auto;
+                @include sectionrye;
                 max-width: 670px;
-                box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
             }
         }
     }
@@ -116,55 +84,33 @@
         min-height: 728px;
         background-color: transparent;
         .gradient {
-            display: block;
-            position: absolute;
-            height: calc(100vh - 118px);
+            @include grad;
             min-height: 728px;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-1 {
-            background-color: #101010;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-2 {
-            background-color: #c7c7c7;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-3 {
-            background-color: #c7c7c7;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            right: 0;
-            z-index: -1;
-            padding: 0;
-        }
-        .gradient-4 {
-            background-color: #101010;
-            height: 50%;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-            padding: 0;
+            .gradient-1 {
+                background-color: $black;
+                @include gradchild;
+            }
+            .gradient-2 {
+                background-color: $white;
+                @include gradchild;
+                bottom: 0;
+            }
+            .gradient-3 {
+                background-color: $white;
+                @include gradchild;
+                right: 0;
+            }
+            .gradient-4 {
+                background-color: $black;
+                @include gradchild;
+                bottom: 0;
+                right: 0;
+            }
         }
         div {
             section {
-                height: fit-content;
-                width: auto;
+                @include sectionrye;
                 max-width: 1300px;
-                box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
                 form {
                     div {
                         div {

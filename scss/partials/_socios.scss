@@ -1,10 +1,11 @@
+@import "mixins";
+@import "extends";
+@import "maps";
+
 .main-socios {
-    background-color: #1e1e1e;
+    background-color: $bgblack;
     height: calc(100vh - 118px);
     min-height: 1050px;
-    .gradient {
-        display: none;
-    }
     div {
         display: flex;
         flex-direction: column;
@@ -13,24 +14,24 @@
         article {
             h1 {
                 font-size: 1.5rem;
-                text-shadow: 3px 2px #000000;
-                color: #ffffff;
+                text-shadow: $textshadow;
+                color: $h1color;
                 margin-bottom: 30px;
             }
             p {
                 font-size: 1rem;
-                background-color: #3c3b3b;
+                background-color: $bgtext;
                 border-radius: 10px;
                 padding: 10px;
-                color: #ffffffd4;
+                color: $tcwhite;
                 max-width: 430px;
             }
             ul {
                 font-size: 1rem;
-                background-color: #3c3b3b;
+                background-color: $bgtext;
                 border-radius: 10px;
                 padding: 12px 26px;
-                color: #ffffffd4;
+                color: $tcwhite;
                 max-width: 430px;
                 list-style: none;
                 li::before {
@@ -39,38 +40,24 @@
             }
         }
         form {
-            border: 6px double #94d56cd9;
-            background-color: black;
+            border: 6px double $green;
+            background-color: $blackform;
             max-width: 340px;
-            box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
+            box-shadow: $boxshadow;
             div {
                 p  {
-                    color: #ffffffd4;
+                    color: $tcwhite;
                 }
             }
             div {
                 label {
-                    color: #94d56cd9;
-                    font-size: .8rem;
+                    @include label;
                 }
                 input {
-                    border: transparent;
-                    border-radius: 3px;
-                    font-size: .8rem;
-                    max-width: 185px;
-                    background-image: linear-gradient(to top, #34313161, #ffffffd4);
+                    @include input;
                 }
                 button {
-                    border-radius: 8px;
-                    background-color: black;
-                    color: #94d56cd9;
-                    font-size: .8rem;
-                    border: 2px outset #94d56cd9;
-                    cursor: pointer;
-                    &:active {
-                        background-color: #94d56cd9;
-                        color: black;
-                    }
+                    @include button;
                 }
             }
         }

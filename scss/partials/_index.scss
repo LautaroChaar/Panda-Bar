@@ -1,21 +1,17 @@
+@import "mixins";
+@import "extends";
+@import "maps";
+
 .main-index {
-    height: calc(100vh - 118px);
-    min-height: 326px;
-    background-image: url(../imagen/fondo.jpg);
-    background-size: cover;
+    @include index;
     div {
         p {
             font-size: 1rem;
             width: 100%;
-            text-shadow: 3px 2px #000000;
+            text-shadow: $textshadow;
         }
         img {
-            width: calc(100% - 30%);
-            height: calc(100% - 60%);
-            object-fit: contain;
-            animation-name: panda;
-            animation-duration: 10s;
-            animation-iteration-count:infinite;
+            @include indeximg;
         }
         h1 {
             font-size: 4rem;

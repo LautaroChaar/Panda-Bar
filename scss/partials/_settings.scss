@@ -1,3 +1,7 @@
+@import "mixins";
+@import "extends";
+@import "maps";
+
 * {
     padding: 0;
     margin: 0;
@@ -9,5 +13,5 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: $black;
 }

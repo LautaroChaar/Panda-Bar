@@ -2,13 +2,13 @@
     list-style: none;
     li {
         .logo-instagram::before {
-            content: url(../imagen/instagram5.png);
+            content: map-get($redes, instagram);
         }
         .logo-facebook::before {
-            content: url(../imagen/facebook-.png);
+            content: map-get($redes, facebook);
         }
         .logo-twitter::before {
-            content: url(../imagen/gorjeo.png);
+            content: map-get($redes, twitter);
         }
     }
 }
@@ -17,7 +17,7 @@ footer {
     div{
         p {
         margin: 0;
-        color: #dedede;
+        color: $white;
         font-size: .5rem;
         }
     }
