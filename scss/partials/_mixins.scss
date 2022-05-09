@@ -89,6 +89,12 @@
     font-weight: bold;
 }
 
+@mixin menuh2 {
+    text-shadow: none;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
 @mixin span {
     display: contents;
     font-weight: bolder;

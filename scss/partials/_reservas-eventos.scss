@@ -5,21 +5,27 @@
 .main-rye {
     background-color: $bgblack;
     height: calc(100vh - 118px);
-    min-height: 1225px;
+    min-height: 1258px;
     .gradient {
         display: none;
     }
     div {
+        h1 {
+            color: $h1color;
+            font-size: 1.5rem;
+            text-shadow: $textshadow;
+        }
         section {
             border: 6px double $green;
             background-color: $black;
             margin: 10px 0;
-            width: 410px;
+            max-width: 410px;
             form {
                 margin-bottom: 16px;
                 div {
                     div {
-                        p {
+                        h2 {
+                            font-size: 1.2rem;
                             color: $tcwhite;
                         }
                     }
@@ -43,11 +49,11 @@
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-rye {
         height: calc(100vh - 118px);
-        min-height: 680px;
+        min-height: 720px;
         background-color: transparent;
         .gradient {
             @include grad;
-            min-height: 680px;
+            min-height: 720px;
             .gradient-1 {
                 background-color: #101010;
                 @include gradchild;
@@ -70,6 +76,16 @@
             }
         }
         div {
+            h1 {
+                color: $white;
+                font-size: 2rem;
+                letter-spacing: 8px;
+                text-shadow: none;
+                span {
+                    color: $black;
+                    font-weight: bold;
+                }
+            }
             section {
                 @include sectionrye;
                 max-width: 670px;
@@ -108,13 +124,23 @@
             }
         }
         div {
+            h1 {
+                color: $white;
+                font-size: 2rem;
+                letter-spacing: 8px;
+                text-shadow: none;
+                span {
+                    color: $black;
+                    font-weight: bold;
+                }
+            }
             section {
                 @include sectionrye;
                 max-width: 1300px;
                 form {
                     div {
                         div {
-                            p {
+                            h2 {
                                 font-size: 1.5rem;
                             }
                             label {

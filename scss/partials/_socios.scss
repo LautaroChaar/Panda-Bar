@@ -19,11 +19,10 @@
                 margin-bottom: 30px;
             }
             p {
-                font-size: 1rem;
+                @extend .parrafo;
                 background-color: $bgtext;
                 border-radius: 10px;
                 padding: 10px;
-                color: $tcwhite;
                 max-width: 430px;
             }
             ul {

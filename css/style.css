@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
 
 * {
   padding: 0;
@@ -102,10 +99,6 @@ footer div p {
   color: #c7c7c7;
   font-size: .5rem; }
 
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
-
 .main-index {
   height: calc(100vh - 118px);
   min-height: 326px;
@@ -114,7 +107,8 @@ footer div p {
   .main-index div p {
     font-size: 1rem;
     width: 100%;
-    text-shadow: 3px 2px #000000; }
+    text-shadow: 3px 2px #000000;
+    color: #ffffff; }
   .main-index div img {
     width: calc(100% - 30%);
     height: calc(100% - 60%);
@@ -123,7 +117,8 @@ footer div p {
     animation-duration: 10s;
     animation-iteration-count: infinite; }
   .main-index div h1 {
-    font-size: 4rem; }
+    font-size: 4rem;
+    color: #ffffff; }
 
 @keyframes panda {
   0% {
@@ -157,9 +152,9 @@ footer div p {
   .main-index div h1 {
     font-size: 5rem; } }
 
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
+.parrafo, .main-conocenos div article p, .main-socios div article p {
+  font-size: 1rem;
+  color: #ffffffd4; }
 
 .main-conocenos {
   background-color: #1e1e1e;
@@ -180,8 +175,6 @@ footer div p {
       margin: 12px 0;
       filter: drop-shadow(2px 4px 4px #000000); }
     .main-conocenos div article p {
-      font-size: 1rem;
-      color: #ffffffd4;
       padding: 12px;
       margin-bottom: 0; }
     .main-conocenos div .about-dates div {
@@ -202,7 +195,6 @@ footer div p {
     .main-conocenos div article h1 {
       font-size: 1.5rem; }
     .main-conocenos div article p {
-      font-size: 1rem;
       border-radius: 10px; }
     .main-conocenos div .about-dates div {
       border-radius: 10px;
@@ -237,10 +229,6 @@ footer div p {
       .main-conocenos div .about-dates div p {
         font-size: .9rem; } }
 
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
-
 .main-menu {
   background-color: #1e1e1e;
   height: calc(100vh - 118px);
@@ -263,32 +251,50 @@ footer div p {
       background-image: url(../imagen/entradas.jpg);
       background-position: center center; }
       .main-menu div section .starters-bg h2 {
-        color: #ffffffd4; }
+        color: #ffffffd4;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section .burgers-bg {
       background-image: url(../imagen/hamburguesa.jpg);
       background-position: center center; }
       .main-menu div section .burgers-bg h2 {
-        color: #040404c7; }
+        color: #040404c7;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section .pizzas-bg {
       background-image: url(../imagen/pizza.jpg);
       background-position: center center; }
       .main-menu div section .pizzas-bg h2 {
-        color: #ffffffd4; }
+        color: #ffffffd4;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section .desserts-bg {
       background-image: url(../imagen/postres.png);
       background-position: center center; }
       .main-menu div section .desserts-bg h2 {
-        color: #ffffffd4; }
+        color: #ffffffd4;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section .drinks-bg {
       background-image: url(../imagen/tragos.jpg);
       background-position: center center; }
       .main-menu div section .drinks-bg h2 {
-        color: #040404c7; }
+        color: #040404c7;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section .beer-bg {
       background-image: url(../imagen/cerveza.jpg);
       background-position: center center; }
       .main-menu div section .beer-bg h2 {
-        color: #ffffffd4; }
+        color: #ffffffd4;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 4px; }
     .main-menu div section div {
       background-size: cover;
       height: 270px; }
@@ -497,24 +503,25 @@ footer div p {
         .main-menu div section .beer-menu div {
           border-bottom-right-radius: 5px; } }
 
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
-
 .main-rye {
   background-color: #1e1e1e;
   height: calc(100vh - 118px);
-  min-height: 1225px; }
+  min-height: 1258px; }
   .main-rye .gradient {
     display: none; }
+  .main-rye div h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: 3px 2px #000000; }
   .main-rye div section {
     border: 6px double #94d56cd9;
     background-color: #101010;
     margin: 10px 0;
-    width: 410px; }
+    max-width: 410px; }
     .main-rye div section form {
       margin-bottom: 16px; }
-      .main-rye div section form div div p {
+      .main-rye div section form div div h2 {
+        font-size: 1.2rem;
         color: #ffffffd4; }
       .main-rye div section form div div label {
         color: #94d56cd9;
@@ -539,7 +546,7 @@ footer div p {
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-rye {
     height: calc(100vh - 118px);
-    min-height: 680px;
+    min-height: 720px;
     background-color: transparent; }
     .main-rye .gradient {
       display: block;
@@ -548,7 +555,7 @@ footer div p {
       z-index: -1;
       padding: 0;
       margin: 0;
-      min-height: 680px; }
+      min-height: 720px; }
       .main-rye .gradient .gradient-1 {
         background-color: #101010;
         height: 50%;
@@ -585,6 +592,14 @@ footer div p {
         margin: 0;
         bottom: 0;
         right: 0; }
+    .main-rye div h1 {
+      color: #c7c7c7;
+      font-size: 2rem;
+      letter-spacing: 8px;
+      text-shadow: none; }
+      .main-rye div h1 span {
+        color: #101010;
+        font-weight: bold; }
     .main-rye div section {
       height: fit-content;
       width: auto;
@@ -640,22 +655,26 @@ footer div p {
         margin: 0;
         bottom: 0;
         right: 0; }
+    .main-rye div h1 {
+      color: #c7c7c7;
+      font-size: 2rem;
+      letter-spacing: 8px;
+      text-shadow: none; }
+      .main-rye div h1 span {
+        color: #101010;
+        font-weight: bold; }
     .main-rye div section {
       height: fit-content;
       width: auto;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 1300px; }
-      .main-rye div section form div div p {
+      .main-rye div section form div div h2 {
         font-size: 1.5rem; }
       .main-rye div section form div div label {
         font-size: 1rem; }
       .main-rye div section form div div input {
         font-size: 1rem;
         max-width: 310px; } }
-
-.menuh2, .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-  text-shadow: none;
-  font-weight: bold; }
 
 .main-socios {
   background-color: #1e1e1e;
@@ -672,11 +691,9 @@ footer div p {
       color: #ffffff;
       margin-bottom: 30px; }
     .main-socios div article p {
-      font-size: 1rem;
       background-color: #3c3b3b;
       border-radius: 10px;
       padding: 10px;
-      color: #ffffffd4;
       max-width: 430px; }
     .main-socios div article ul {
       font-size: 1rem;
