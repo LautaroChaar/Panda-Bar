@@ -1,75 +1,65 @@
-@import "variables";
-@import "extends";
-@import "maps";
-
 .main-menu {
     background-color: $bgblack;
-    height: calc(100vh - 118px);
-    min-height: 1715px;
+    height: calc(100vh - 154px);
+    min-height: 1732px;
     .gradient {
         display: none;
     }
     div {
+        @extend .pad;
         h1 {
-            font-size: 2rem;
-            text-shadow: $textshadow;
-            color: $h1color;
-            font-weight: bold;
+            @include h1;
             span {
                 display: contents;
                 color: $h1color;
-                font-weight: bold;
             }
         }
         section {
             padding: 0 12px 12px 12px;
             width: 100vw;
-            .starters-bg {
-                background-image: map-get($bg, starters);
+            .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
                 background-position: center center;
                 h2 {
+                    font-size: 1.5rem;
+                    text-shadow: none;
+                    font-weight: bold;
+                    padding-top: 8px;
+                }
+            }
+            .starters-bg {
+                background-image: map-get($bg, starters);
+                h2 {
                     color: $tcwhite;
-                    @include menuh2;
                 }
             }
             .burgers-bg {
                 background-image: map-get($bg, burgers);
-                background-position: center center;
                 h2 {
                     color: $tcblack;
-                    @include menuh2;
                 }
             }
             .pizzas-bg {
                 background-image: map-get($bg, pizzas);
-                background-position: center center;
                 h2 {
                     color: $tcwhite;
-                    @include menuh2;
                 }
             }
             .desserts-bg {
                 background-image: map-get($bg, desserts);
-                background-position: center center;
                 h2 {
                     color: $tcwhite;
-                    @include menuh2;
                 }
             }
             .drinks-bg {
-                background-image: map-get($bg, drinks);
-                background-position: center center;
+                background-image: map-get($bg, drinks);                
                 h2 {
                     color: $tcblack;
-                    @include menuh2;
                 }
             }
             .beer-bg {
                 background-image: map-get($bg, beer);
-                background-position: center center;
                 h2 {
                     color: $tcwhite;
-                    @include menuh2;
                 }
             }
             div {
@@ -94,13 +84,9 @@
                     padding: 0;
                     margin: 0;
                 }
-                h2 {
-                    font-size: 1.8rem;
-                    text-shadow: $textshadow;
-                }
                 div {
                     display: contents;
-                    background-color: black;
+                    background-color: #000000;
                     opacity: 0;
                     transition: opacity .8s;
                     height: 100%;
@@ -116,12 +102,11 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-menu {
-        height: calc(100vh - 118px);
-        min-height: 756px;
+        min-height: 728px;
         background-color: transparent;
         .gradient {
             @include grad;
-            min-height: 756px;
+            min-height: 728px;
             .gradient-1 {
                 background: $black;
                 @include gradchild;
@@ -145,15 +130,22 @@
         }
         div {
             h1 {
-                @include menuh1;
+                letter-spacing: 10px;
+                text-shadow: none;
                 color: $black;
+                font-weight: bold;
                 span {
-                    @include span;
+                    display: contents;
+                    font-weight: bold;
                     color: $white;
                 }
             }
             section {
-                @include menusection;
+                width: 100%;
+                padding: 0;
+                border: 4px solid #6c6c6c;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
                 max-width: 650px;
                 .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
                     background-size: contain;
@@ -192,12 +184,11 @@
 
 @media screen and (min-width:992px) {
     .main-menu {
-        height: calc(100vh - 118px);
-        min-height: 644px;
+        min-height: 590px;
         background-color: transparent;
         .gradient {
             @include grad;
-            min-height: 644px;
+            min-height: 590px;
             .gradient-1 {
                 background: linear-gradient(-45deg, $white 43%, $black 43%);
                 @include gradchild;
@@ -221,15 +212,22 @@
         }
         div {
             h1 {
-                @include menuh1;
+                font-size: 2rem;
+                letter-spacing: 8px;
+                text-shadow: none;
                 color: $white;
                 span {
-                    @include span;
+                    display: contents;
+                    font-weight: bolder;
                     color: $black;
                 }
             }
             section {
-                @include menusection;
+                width: 100%;
+                padding: 0;
+                border: 4px solid #6c6c6c;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
                 max-width: 1140px;
                 .starters-bg, .burgers-bg , .pizzas-bg , .desserts-bg , .drinks-bg , .beer-bg  {
                     background-size: contain;

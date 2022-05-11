@@ -1,37 +1,33 @@
-@import "mixins";
-@import "extends";
-@import "maps";
-
 .main-conocenos {
-    @include conocenos;
+    background-color: $bgblack;
+    @include main;
+    min-height: 1496px;
     div {
-        padding-top: 12px;
-        padding-bottom: 12px;
         article {
             h1 {
-                font-size: 1.5rem;
-                color: $h1color;
-                text-shadow: $textshadow;
-                margin-bottom: 30px;
+                @include h1;
             }
             img {
-                @include conocenosimg
+                padding: 16px;
+                height: 300px;
+                width: auto;
+                filter: drop-shadow(2px 4px 4px #000000);
             }
             p {
-                @extend .parrafo;
+                color: $tcwhite;
                 padding: 12px;
                 margin-bottom: 0;
+                font-weight: bold;
             }
         }
         .about-dates {
             div {
                 background-color: $bgtext;
                 h2 {
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     color: $green;
                 }
                 p {
-                    font-size: .8rem;
                     color: $tcwhite;
                     font-weight: 500;
                 }
@@ -42,30 +38,21 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-conocenos {
-        height: calc(100vh - 118px);
         min-height: 1030px;
         line-height: initial;
         div {
-            article {
-                h1 {
-                    font-size: 1.5rem;
-                }
-                p {
-                    border-radius: 10px;
-                }
-            }
             .about-dates {
+                .phone-dates {
+                    margin: 8px 10px 0 10px;
+                }
                 div {
                     border-radius: 10px;
                     width: fit-content;
-                    min-width: 250px;
-                    height: 76px;
-                    padding: 2px;
+                    min-width: 268px;
+                    height: 100px;
+                    padding: 10px;
                     h2 {
-                        font-size: 1rem;
-                    }
-                    p {
-                        font-size: .8rem;
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -75,8 +62,7 @@
 
 @media screen and (min-width:992px) {
     .main-conocenos {
-        height: calc(100vh - 118px);
-        min-height: 950px;
+        min-height: 1028px;
         line-height: initial;
         div {
             article {
@@ -85,22 +71,24 @@
                 }
                 p {
                     font-size: 1.2rem;
-                    border-radius: 10px;
                     width: 90%;
                 }
             }
             .about-dates {
+                .phone-dates {
+                    margin: 8px 10px 0 10px;
+                }
                 div {
                     border-radius: 10px;
                     width: fit-content;
-                    min-width: 210px;
-                    height: 94px;
-                    padding: 8px;
+                    min-width: 330px;
+                    height: 126px;
+                    padding: 10px;
                     h2 {
-                        font-size: 1rem;
+                        font-size: 2rem;
                     }
                     p {
-                        font-size: .9rem;
+                        font-size: 1.2rem;
                     }
                 }
             }

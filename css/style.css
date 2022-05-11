@@ -1,15 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-html {
-  font-family: 'Ubuntu', sans-serif; }
-
-body {
-  background-color: #101010; }
+.pad, .main-menu div, .main-rye .pad {
+  padding-top: 12px;
+  padding-bottom: 12px; }
 
 .header-box {
   background-image: url(../imagen/encabezado.jpg);
@@ -85,6 +77,13 @@ body {
   100% {
     top: 0; } }
 
+footer {
+  height: 77px; }
+  footer div p {
+    margin: 0;
+    color: #c7c7c7;
+    font-size: .5rem; }
+
 .nav__list {
   list-style: none; }
   .nav__list li .logo-instagram::before {
@@ -94,19 +93,13 @@ body {
   .nav__list li .logo-twitter::before {
     content: url(../imagen/gorjeo.png); }
 
-footer div p {
-  margin: 0;
-  color: #c7c7c7;
-  font-size: .5rem; }
-
 .main-index {
-  height: calc(100vh - 118px);
+  height: calc(100vh - 154px);
+  padding: 12px 0;
   min-height: 326px;
   background-image: url(../imagen/fondo.jpg);
   background-size: cover; }
   .main-index div p {
-    font-size: 1rem;
-    width: 100%;
     text-shadow: 3px 2px #000000;
     color: #ffffff; }
   .main-index div img {
@@ -134,9 +127,7 @@ footer div p {
 
 @media screen and (min-width: 480px) and (max-width: 991px) {
   .main-index div p {
-    font-size: 1.2rem;
-    border-radius: 3px;
-    width: fit-content; }
+    font-size: 1.2rem; }
   .main-index div img {
     width: calc(100% - 60%); }
   .main-index div h1 {
@@ -144,157 +135,126 @@ footer div p {
 
 @media screen and (min-width: 992px) {
   .main-index div p {
-    font-size: 1.5rem;
-    border-radius: 3px;
-    width: fit-content; }
+    font-size: 1.5rem; }
   .main-index div img {
     width: calc(100% - 60%); }
   .main-index div h1 {
     font-size: 5rem; } }
 
-.parrafo, .main-conocenos div article p, .main-socios div article p {
-  font-size: 1rem;
-  color: #ffffffd4; }
-
 .main-conocenos {
   background-color: #1e1e1e;
-  height: calc(100vh - 118px);
-  min-height: 1530px; }
-  .main-conocenos div {
-    padding-top: 12px;
-    padding-bottom: 12px; }
-    .main-conocenos div article h1 {
+  height: calc(100vh - 154px);
+  padding: 12px 0;
+  min-height: 1496px; }
+  .main-conocenos div article h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 3px 2px #000000;
+    font-weight: bold; }
+  .main-conocenos div article img {
+    padding: 16px;
+    height: 300px;
+    width: auto;
+    filter: drop-shadow(2px 4px 4px #000000); }
+  .main-conocenos div article p {
+    color: #ffffffd4;
+    padding: 12px;
+    margin-bottom: 0;
+    font-weight: bold; }
+  .main-conocenos div .about-dates div {
+    background-color: #3c3b3b; }
+    .main-conocenos div .about-dates div h2 {
       font-size: 1.5rem;
-      color: #ffffff;
-      text-shadow: 3px 2px #000000;
-      margin-bottom: 30px; }
-    .main-conocenos div article img {
-      padding: 16px;
-      height: 300px;
-      width: auto;
-      margin: 12px 0;
-      filter: drop-shadow(2px 4px 4px #000000); }
-    .main-conocenos div article p {
-      padding: 12px;
-      margin-bottom: 0; }
-    .main-conocenos div .about-dates div {
-      background-color: #3c3b3b; }
-      .main-conocenos div .about-dates div h2 {
-        font-size: 1rem;
-        color: #94d56cd9; }
-      .main-conocenos div .about-dates div p {
-        font-size: .8rem;
-        color: #ffffffd4;
-        font-weight: 500; }
+      color: #94d56cd9; }
+    .main-conocenos div .about-dates div p {
+      color: #ffffffd4;
+      font-weight: 500; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-conocenos {
-    height: calc(100vh - 118px);
     min-height: 1030px;
     line-height: initial; }
-    .main-conocenos div article h1 {
-      font-size: 1.5rem; }
-    .main-conocenos div article p {
-      border-radius: 10px; }
+    .main-conocenos div .about-dates .phone-dates {
+      margin: 8px 10px 0 10px; }
     .main-conocenos div .about-dates div {
       border-radius: 10px;
       width: fit-content;
-      min-width: 250px;
-      height: 76px;
-      padding: 2px; }
+      min-width: 268px;
+      height: 100px;
+      padding: 10px; }
       .main-conocenos div .about-dates div h2 {
-        font-size: 1rem; }
-      .main-conocenos div .about-dates div p {
-        font-size: .8rem; } }
+        font-size: 1.5rem; } }
 
 @media screen and (min-width: 992px) {
   .main-conocenos {
-    height: calc(100vh - 118px);
-    min-height: 950px;
+    min-height: 1028px;
     line-height: initial; }
     .main-conocenos div article h1 {
       font-size: 2rem; }
     .main-conocenos div article p {
       font-size: 1.2rem;
-      border-radius: 10px;
       width: 90%; }
+    .main-conocenos div .about-dates .phone-dates {
+      margin: 8px 10px 0 10px; }
     .main-conocenos div .about-dates div {
       border-radius: 10px;
       width: fit-content;
-      min-width: 210px;
-      height: 94px;
-      padding: 8px; }
+      min-width: 330px;
+      height: 126px;
+      padding: 10px; }
       .main-conocenos div .about-dates div h2 {
-        font-size: 1rem; }
+        font-size: 2rem; }
       .main-conocenos div .about-dates div p {
-        font-size: .9rem; } }
+        font-size: 1.2rem; } }
 
 .main-menu {
   background-color: #1e1e1e;
-  height: calc(100vh - 118px);
-  min-height: 1715px; }
+  height: calc(100vh - 154px);
+  min-height: 1732px; }
   .main-menu .gradient {
     display: none; }
   .main-menu div h1 {
-    font-size: 2rem;
-    text-shadow: 3px 2px #000000;
+    font-size: 1.5rem;
     color: #ffffff;
+    text-shadow: 3px 2px #000000;
     font-weight: bold; }
     .main-menu div h1 span {
       display: contents;
-      color: #ffffff;
-      font-weight: bold; }
+      color: #ffffff; }
   .main-menu div section {
     padding: 0 12px 12px 12px;
     width: 100vw; }
+    .main-menu div section .starters-bg, .main-menu div section .burgers-bg, .main-menu div section .pizzas-bg, .main-menu div section .desserts-bg, .main-menu div section .drinks-bg, .main-menu div section .beer-bg {
+      background-position: center center; }
+      .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
+        font-size: 1.5rem;
+        text-shadow: none;
+        font-weight: bold;
+        padding-top: 8px; }
     .main-menu div section .starters-bg {
-      background-image: url(../imagen/entradas.jpg);
-      background-position: center center; }
+      background-image: url(../imagen/entradas.jpg); }
       .main-menu div section .starters-bg h2 {
-        color: #ffffffd4;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #ffffffd4; }
     .main-menu div section .burgers-bg {
-      background-image: url(../imagen/hamburguesa.jpg);
-      background-position: center center; }
+      background-image: url(../imagen/hamburguesa.jpg); }
       .main-menu div section .burgers-bg h2 {
-        color: #040404c7;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #040404c7; }
     .main-menu div section .pizzas-bg {
-      background-image: url(../imagen/pizza.jpg);
-      background-position: center center; }
+      background-image: url(../imagen/pizza.jpg); }
       .main-menu div section .pizzas-bg h2 {
-        color: #ffffffd4;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #ffffffd4; }
     .main-menu div section .desserts-bg {
-      background-image: url(../imagen/postres.png);
-      background-position: center center; }
+      background-image: url(../imagen/postres.png); }
       .main-menu div section .desserts-bg h2 {
-        color: #ffffffd4;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #ffffffd4; }
     .main-menu div section .drinks-bg {
-      background-image: url(../imagen/tragos.jpg);
-      background-position: center center; }
+      background-image: url(../imagen/tragos.jpg); }
       .main-menu div section .drinks-bg h2 {
-        color: #040404c7;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #040404c7; }
     .main-menu div section .beer-bg {
-      background-image: url(../imagen/cerveza.jpg);
-      background-position: center center; }
+      background-image: url(../imagen/cerveza.jpg); }
       .main-menu div section .beer-bg h2 {
-        color: #ffffffd4;
-        text-shadow: none;
-        font-weight: bold;
-        padding-top: 4px; }
+        color: #ffffffd4; }
     .main-menu div section div {
       background-size: cover;
       height: 270px; }
@@ -314,12 +274,9 @@ footer div p {
         line-height: 26px;
         padding: 0;
         margin: 0; }
-      .main-menu div section div h2 {
-        font-size: 1.8rem;
-        text-shadow: 3px 2px #000000; }
       .main-menu div section div div {
         display: contents;
-        background-color: black;
+        background-color: #000000;
         opacity: 0;
         transition: opacity .8s;
         height: 100%;
@@ -329,17 +286,16 @@ footer div p {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-menu {
-    height: calc(100vh - 118px);
-    min-height: 756px;
+    min-height: 728px;
     background-color: transparent; }
     .main-menu .gradient {
       display: block;
       position: absolute;
-      height: calc(100vh - 118px);
+      height: calc(100vh - 154px);
       z-index: -1;
       padding: 0;
       margin: 0;
-      min-height: 756px; }
+      min-height: 728px; }
       .main-menu .gradient .gradient-1 {
         background: #101010;
         height: 50%;
@@ -377,14 +333,13 @@ footer div p {
         padding: 0;
         margin: 0; }
     .main-menu div h1 {
-      font-size: 3rem;
-      letter-spacing: 14px;
+      letter-spacing: 10px;
       text-shadow: none;
-      font-weight: bold;
-      color: #101010; }
+      color: #101010;
+      font-weight: bold; }
       .main-menu div h1 span {
         display: contents;
-        font-weight: bolder;
+        font-weight: bold;
         color: #c7c7c7; }
     .main-menu div section {
       width: 100%;
@@ -416,17 +371,16 @@ footer div p {
 
 @media screen and (min-width: 992px) {
   .main-menu {
-    height: calc(100vh - 118px);
-    min-height: 644px;
+    min-height: 590px;
     background-color: transparent; }
     .main-menu .gradient {
       display: block;
       position: absolute;
-      height: calc(100vh - 118px);
+      height: calc(100vh - 154px);
       z-index: -1;
       padding: 0;
       margin: 0;
-      min-height: 644px; }
+      min-height: 590px; }
       .main-menu .gradient .gradient-1 {
         background: linear-gradient(-45deg, #c7c7c7 43%, #101010 43%);
         height: 50%;
@@ -464,10 +418,9 @@ footer div p {
         bottom: 0;
         right: 0; }
     .main-menu div h1 {
-      font-size: 3rem;
-      letter-spacing: 14px;
+      font-size: 2rem;
+      letter-spacing: 8px;
       text-shadow: none;
-      font-weight: bold;
       color: #c7c7c7; }
       .main-menu div h1 span {
         display: contents;
@@ -505,38 +458,37 @@ footer div p {
 
 .main-rye {
   background-color: #1e1e1e;
-  height: calc(100vh - 118px);
-  min-height: 1258px; }
+  height: calc(100vh - 154px);
+  min-height: 1410px; }
   .main-rye .gradient {
     display: none; }
   .main-rye div h1 {
-    color: #ffffff;
     font-size: 1.5rem;
-    text-shadow: 3px 2px #000000; }
+    color: #ffffff;
+    text-shadow: 3px 2px #000000;
+    font-weight: bold; }
   .main-rye div section {
     border: 6px double #94d56cd9;
     background-color: #101010;
     margin: 10px 0;
-    max-width: 410px; }
+    max-width: 410px;
+    padding: 10px 0; }
     .main-rye div section form {
       margin-bottom: 16px; }
       .main-rye div section form div div h2 {
         font-size: 1.2rem;
         color: #ffffffd4; }
       .main-rye div section form div div label {
-        color: #94d56cd9;
-        font-size: .8rem; }
+        color: #94d56cd9; }
       .main-rye div section form div div input {
         border: transparent;
         border-radius: 3px;
-        font-size: .8rem;
-        max-width: 185px;
+        max-width: 210px;
         background-image: linear-gradient(to top, #34313161, #ffffffd4); }
       .main-rye div section form div div button {
         border-radius: 8px;
         background-color: #101010;
         color: #94d56cd9;
-        font-size: .8rem;
         border: 2px outset #94d56cd9;
         cursor: pointer; }
         .main-rye div section form div div button:active {
@@ -545,17 +497,16 @@ footer div p {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-rye {
-    height: calc(100vh - 118px);
-    min-height: 720px;
+    min-height: 804px;
     background-color: transparent; }
     .main-rye .gradient {
       display: block;
       position: absolute;
-      height: calc(100vh - 118px);
+      height: calc(100vh - 154px);
       z-index: -1;
       padding: 0;
       margin: 0;
-      min-height: 720px; }
+      min-height: 804px; }
       .main-rye .gradient .gradient-1 {
         background-color: #101010;
         height: 50%;
@@ -594,8 +545,7 @@ footer div p {
         right: 0; }
     .main-rye div h1 {
       color: #c7c7c7;
-      font-size: 2rem;
-      letter-spacing: 8px;
+      letter-spacing: 2px;
       text-shadow: none; }
       .main-rye div h1 span {
         color: #101010;
@@ -608,17 +558,16 @@ footer div p {
 
 @media screen and (min-width: 992px) {
   .main-rye {
-    height: calc(100vh - 118px);
-    min-height: 728px;
+    min-height: 802px;
     background-color: transparent; }
     .main-rye .gradient {
       display: block;
       position: absolute;
-      height: calc(100vh - 118px);
+      height: calc(100vh - 154px);
       z-index: -1;
       padding: 0;
       margin: 0;
-      min-height: 728px; }
+      min-height: 802px; }
       .main-rye .gradient .gradient-1 {
         background-color: #101010;
         height: 50%;
@@ -658,7 +607,6 @@ footer div p {
     .main-rye div h1 {
       color: #c7c7c7;
       font-size: 2rem;
-      letter-spacing: 8px;
       text-shadow: none; }
       .main-rye div h1 span {
         color: #101010;
@@ -669,16 +617,17 @@ footer div p {
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 1300px; }
       .main-rye div section form div div h2 {
-        font-size: 1.5rem; }
+        font-size: 1.4rem; }
       .main-rye div section form div div label {
-        font-size: 1rem; }
+        font-size: 1.2rem; }
       .main-rye div section form div div input {
-        font-size: 1rem;
+        font-size: 1.2rem;
         max-width: 310px; } }
 
 .main-socios {
   background-color: #1e1e1e;
-  height: calc(100vh - 118px);
+  height: calc(100vh - 154px);
+  padding: 12px 0;
   min-height: 1050px; }
   .main-socios div {
     display: flex;
@@ -687,20 +636,22 @@ footer div p {
     align-items: center; }
     .main-socios div article h1 {
       font-size: 1.5rem;
-      text-shadow: 3px 2px #000000;
       color: #ffffff;
-      margin-bottom: 30px; }
+      text-shadow: 3px 2px #000000;
+      font-weight: bold; }
     .main-socios div article p {
+      color: #ffffffd4;
       background-color: #3c3b3b;
       border-radius: 10px;
       padding: 10px;
-      max-width: 430px; }
+      max-width: 430px;
+      font-weight: bold; }
     .main-socios div article ul {
-      font-size: 1rem;
       background-color: #3c3b3b;
       border-radius: 10px;
       padding: 12px 26px;
       color: #ffffffd4;
+      font-weight: bold;
       max-width: 430px;
       list-style: none; }
       .main-socios div article ul li::before {
@@ -710,22 +661,20 @@ footer div p {
       background-color: #0a0a0a;
       max-width: 340px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px; }
-      .main-socios div form div p {
+      .main-socios div form div h2 {
+        font-size: 1.2rem;
         color: #ffffffd4; }
       .main-socios div form div label {
-        color: #94d56cd9;
-        font-size: .8rem; }
+        color: #94d56cd9; }
       .main-socios div form div input {
         border: transparent;
         border-radius: 3px;
-        font-size: .8rem;
-        max-width: 185px;
+        max-width: 210px;
         background-image: linear-gradient(to top, #34313161, #ffffffd4); }
       .main-socios div form div button {
         border-radius: 8px;
         background-color: #101010;
         color: #94d56cd9;
-        font-size: .8rem;
         border: 2px outset #94d56cd9;
         cursor: pointer; }
         .main-socios div form div button:active {
@@ -734,15 +683,12 @@ footer div p {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-socios {
-    height: calc(100vh - 118px);
-    min-height: 720px; }
+    min-height: 660px; }
     .main-socios div article h1 {
       font-size: 1.5rem; }
     .main-socios div article p {
-      font-size: 1rem;
       max-width: 760px; }
     .main-socios div article ul {
-      font-size: 1rem;
       max-width: 760px;
       list-style: none; }
       .main-socios div article ul li::before {
@@ -755,8 +701,7 @@ footer div p {
 
 @media screen and (min-width: 992px) {
   .main-socios {
-    height: calc(100vh - 118px);
-    min-height: 490px; }
+    min-height: 546px; }
     .main-socios div {
       display: flex;
       flex-direction: row;
@@ -774,4 +719,20 @@ footer div p {
           max-width: 500px;
           list-style: none; }
           .main-socios div article ul li::before {
-            content: url(../imagen/icon.png); } }
+            content: url(../imagen/icon.png); }
+      .main-socios div form div h2 {
+        font-size: 1.4rem; }
+      .main-socios div form div label {
+        font-size: 1.2rem; }
+      .main-socios div form div input {
+        font-size: 1.2rem;
+        max-width: 250px; } }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #101010;
+  font-family: 'Ubuntu', sans-serif; }

@@ -1,10 +1,6 @@
-@import "mixins";
-@import "extends";
-@import "maps";
-
 .main-socios {
     background-color: $bgblack;
-    height: calc(100vh - 118px);
+    @include main;
     min-height: 1050px;
     div {
         display: flex;
@@ -13,24 +9,22 @@
         align-items: center;
         article {
             h1 {
-                font-size: 1.5rem;
-                text-shadow: $textshadow;
-                color: $h1color;
-                margin-bottom: 30px;
+                @include h1;
             }
             p {
-                @extend .parrafo;
+                color: $tcwhite;
                 background-color: $bgtext;
                 border-radius: 10px;
                 padding: 10px;
                 max-width: 430px;
+                font-weight: bold;
             }
             ul {
-                font-size: 1rem;
                 background-color: $bgtext;
                 border-radius: 10px;
                 padding: 12px 26px;
                 color: $tcwhite;
+                font-weight: bold;
                 max-width: 430px;
                 list-style: none;
                 li::before {
@@ -44,13 +38,14 @@
             max-width: 340px;
             box-shadow: $boxshadow;
             div {
-                p  {
+                h2 {
+                    font-size: 1.2rem;
                     color: $tcwhite;
                 }
             }
             div {
                 label {
-                    @include label;
+                    color: $green;
                 }
                 input {
                     @include input;
@@ -65,19 +60,16 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-socios {
-        height: calc(100vh - 118px);
-        min-height: 720px;
+        min-height: 660px;
         div {
             article {
                 h1 {
                     font-size: 1.5rem;
                 }
                 p {
-                    font-size: 1rem;
                     max-width: 760px;
                 }
                 ul {
-                    font-size: 1rem;
                     max-width: 760px;
                     list-style: none;
                     li::before {
@@ -100,8 +92,7 @@
 
 @media screen and (min-width:992px) {
     .main-socios {
-        height: calc(100vh - 118px);
-        min-height: 490px;
+        min-height: 546px;
         div {
             display: flex;
             flex-direction: row;
@@ -122,6 +113,22 @@
                     list-style: none;
                     li::before {
                         content: url(../imagen/icon.png);
+                    }
+                }
+            }
+            form {
+                div {
+                    h2 {
+                        font-size: 1.4rem;
+                    }
+                }
+                div {
+                    label {
+                        font-size: 1.2rem;
+                    }
+                    input {
+                        font-size: 1.2rem;
+                        max-width: 250px;
                     }
                 }
             }

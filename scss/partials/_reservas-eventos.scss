@@ -1,25 +1,23 @@
-@import "mixins";
-@import "extends";
-@import "maps";
-
 .main-rye {
     background-color: $bgblack;
-    height: calc(100vh - 118px);
-    min-height: 1258px;
+    height: calc(100vh - 154px);
+    min-height: 1410px;
     .gradient {
         display: none;
     }
+    .pad {
+        @extend .pad;
+    }
     div {
         h1 {
-            color: $h1color;
-            font-size: 1.5rem;
-            text-shadow: $textshadow;
+            @include h1;
         }
         section {
             border: 6px double $green;
             background-color: $black;
             margin: 10px 0;
             max-width: 410px;
+            padding: 10px 0;
             form {
                 margin-bottom: 16px;
                 div {
@@ -31,7 +29,7 @@
                     }
                     div {
                         label {
-                            @include label;
+                            color: $green;
                         }
                         input {
                             @include input;
@@ -48,12 +46,11 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-rye {
-        height: calc(100vh - 118px);
-        min-height: 720px;
+        min-height: 804px;
         background-color: transparent;
         .gradient {
             @include grad;
-            min-height: 720px;
+            min-height: 804px;
             .gradient-1 {
                 background-color: #101010;
                 @include gradchild;
@@ -78,8 +75,7 @@
         div {
             h1 {
                 color: $white;
-                font-size: 2rem;
-                letter-spacing: 8px;
+                letter-spacing: 2px;
                 text-shadow: none;
                 span {
                     color: $black;
@@ -87,7 +83,9 @@
                 }
             }
             section {
-                @include sectionrye;
+                height: fit-content;
+                width: auto;
+                box-shadow: $boxshadow;
                 max-width: 670px;
             }
         }
@@ -96,12 +94,11 @@
 
 @media screen and (min-width:992px) {
     .main-rye {
-        height: calc(100vh - 118px);
-        min-height: 728px;
+        min-height: 802px;
         background-color: transparent;
         .gradient {
             @include grad;
-            min-height: 728px;
+            min-height: 802px;
             .gradient-1 {
                 background-color: $black;
                 @include gradchild;
@@ -127,7 +124,6 @@
             h1 {
                 color: $white;
                 font-size: 2rem;
-                letter-spacing: 8px;
                 text-shadow: none;
                 span {
                     color: $black;
@@ -135,19 +131,21 @@
                 }
             }
             section {
-                @include sectionrye;
+                height: fit-content;
+                width: auto;
+                box-shadow: $boxshadow;
                 max-width: 1300px;
                 form {
                     div {
                         div {
                             h2 {
-                                font-size: 1.5rem;
+                                font-size: 1.4rem;
                             }
                             label {
-                                font-size: 1rem;
+                                font-size: 1.2rem;
                             }
                             input {
-                                font-size: 1rem;
+                                font-size: 1.2rem;
                                 max-width: 310px;
                             }
                         }
