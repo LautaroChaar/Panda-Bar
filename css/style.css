@@ -29,8 +29,8 @@
         height: 20%;
         border-bottom: 4px solid #94d56cd9;
         display: flex;
-        justify-content: center;
-        align-items: center; }
+        align-items: center;
+        justify-content: center; }
         .header-box nav div div ul li:last-of-type {
           border: none; }
         .header-box nav div div ul li a {
@@ -265,9 +265,9 @@ footer {
         opacity: .9; }
       .main-menu div section div:hover div ul {
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         list-style: none;
         font-size: .8rem;
         width: 100%;
@@ -704,9 +704,9 @@ footer {
     min-height: 546px; }
     .main-socios div {
       display: flex;
+      align-items: center;
       flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center; }
+      justify-content: space-evenly; }
       .main-socios div article {
         max-width: 500px; }
         .main-socios div article h1 {

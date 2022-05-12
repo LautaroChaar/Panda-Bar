@@ -32,9 +32,8 @@
                     li {
                         height: 20%;
                         border-bottom: 4px solid $green;
-                        display: flex;
+                        @include flex;
                         justify-content: center;
-                        align-items: center;
                         &:last-of-type {
                             border: none;
                         }

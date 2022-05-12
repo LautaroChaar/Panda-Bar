@@ -3,6 +3,11 @@
     padding: 10px;
 }
 
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
 @mixin h1 {
     font-size: 1.5rem;
     color: $h1color;

@@ -73,10 +73,9 @@
                     opacity: .9;
                 }
                 &:hover div ul {
-                    display: flex;
+                    @include flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
                     list-style: none;
                     font-size: .8rem;
                     width: 100%;
