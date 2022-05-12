@@ -14,8 +14,7 @@
             p {
                 color: $tcwhite;
                 background-color: $bgtext;
-                border-radius: 10px;
-                padding: 10px;
+                @include border;
                 max-width: 430px;
                 font-weight: bold;
             }

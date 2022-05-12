@@ -79,11 +79,10 @@
                     margin: 8px 10px 0 10px;
                 }
                 div {
-                    border-radius: 10px;
+                    @include border;
                     width: fit-content;
                     min-width: 330px;
                     height: 126px;
-                    padding: 10px;
                     h2 {
                         font-size: 2rem;
                     }
