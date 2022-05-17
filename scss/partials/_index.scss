@@ -1,24 +1,22 @@
+// mobile
+
 .main-index {
-    @include main;
-    min-height: 326px;
-    background-image: url(../imagen/fondo.jpg);
+    @include main ( url(../imagen/fondo.jpg), calc(100vh - 154px), 326px);
     background-size: cover;
+    padding: 12px 0;
     div {
         p {
             text-shadow: $textshadow;
-            color: $h1color;
+            color: $white2;
         }
         img {
-            width: calc(100% - 30%);
-            height: calc(100% - 60%);
+            @include animation (panda, 10s, infinite, none);
+            @include size (calc(100% - 60%), calc(100% - 30%));
             object-fit: contain;
-            animation-name: panda;
-            animation-duration: 10s;
-            animation-iteration-count:infinite;
         }
         h1 {
             font-size: 4rem;
-            color: $h1color;
+            color: $white2;
         }
     }
 }
@@ -41,6 +39,8 @@
     }
 }
 
+// tablet
+
 @media screen and (min-width: 480px) and (max-width:991px) {
     .main-index {
         div {
@@ -56,6 +56,8 @@
         }
     } 
 }
+
+// desktop
 
 @media screen and (min-width:992px) {
     .main-index {

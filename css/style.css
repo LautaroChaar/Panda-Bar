@@ -16,26 +16,30 @@
     .header-box nav div button span {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0,0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
   .header-box nav div div {
+    height: 100vh;
+    width: 45%;
     position: fixed;
     top: 0;
-    left: -12px;
-    width: 45%;
-    z-index: 1;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 6;
     background-color: #101010;
-    height: 100vh; }
+    border-right: 4px solid #94d56cd9; }
     .header-box nav div div ul {
       height: 100vh; }
       .header-box nav div div ul li {
-        height: 20%;
-        border-bottom: 4px solid #94d56cd9;
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        height: 20%;
+        border-bottom: 4px solid #94d56cd9; }
         .header-box nav div div ul li:last-of-type {
           border: none; }
         .header-box nav div div ul li a {
           font-size: .8rem;
-          color: #ffffffd4; }
+          color: #c7c7c7; }
           .header-box nav div div ul li a:hover {
             color: #94d56cd9; }
 
@@ -48,12 +52,17 @@
     background-image: none;
     background-color: #e8e8e8; }
     .header-box nav div div {
-      position: inherit;
+      height: auto;
       width: 100%;
+      position: inherit;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
       z-index: 0;
       background-color: transparent;
-      height: auto;
-      min-height: 0; }
+      min-height: 0;
+      border-right: none; }
       .header-box nav div div ul {
         height: auto;
         min-height: 0; }
@@ -61,13 +70,17 @@
           border: none;
           height: auto; }
           .header-box nav div div ul li a {
-            font-size: 1.3rem;
-            animation-name: header;
-            animation-duration: .3s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
             position: relative;
             top: -100px;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            z-index: auto;
+            animation-name: header;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 1.3rem;
             height: 100%;
             color: #101010; } }
 
@@ -78,6 +91,7 @@
     top: 0; } }
 
 footer {
+  border-top: 6px solid #c7c7c7;
   height: 77px; }
   footer div p {
     margin: 0;
@@ -94,24 +108,25 @@ footer {
     content: url(../imagen/gorjeo.png); }
 
 .main-index {
+  background: url(../imagen/fondo.jpg);
   height: calc(100vh - 154px);
-  padding: 12px 0;
   min-height: 326px;
-  background-image: url(../imagen/fondo.jpg);
-  background-size: cover; }
+  background-size: cover;
+  padding: 12px 0; }
   .main-index div p {
     text-shadow: 3px 2px #000000;
-    color: #ffffff; }
+    color: #ffffffd4; }
   .main-index div img {
-    width: calc(100% - 30%);
-    height: calc(100% - 60%);
-    object-fit: contain;
     animation-name: panda;
     animation-duration: 10s;
-    animation-iteration-count: infinite; }
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    height: calc(100% - 60%);
+    width: calc(100% - 30%);
+    object-fit: contain; }
   .main-index div h1 {
     font-size: 4rem;
-    color: #ffffff; }
+    color: #ffffffd4; }
 
 @keyframes panda {
   0% {
@@ -142,119 +157,139 @@ footer {
     font-size: 5rem; } }
 
 .main-conocenos {
-  background-color: #1e1e1e;
+  background: #101010;
   height: calc(100vh - 154px);
-  padding: 12px 0;
-  min-height: 1496px; }
-  .main-conocenos div article h1 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-shadow: 3px 2px #000000;
-    font-weight: bold; }
-  .main-conocenos div article img {
-    padding: 16px;
-    height: 300px;
-    width: auto;
-    filter: drop-shadow(2px 4px 4px #000000); }
-  .main-conocenos div article p {
-    color: #ffffffd4;
-    padding: 12px;
-    margin-bottom: 0;
-    font-weight: bold; }
+  min-height: 1676px;
+  padding: 12px 0; }
+  .main-conocenos div article {
+    width: 304px; }
+    .main-conocenos div article h1 {
+      font: normal bold 1.5rem 'Ubuntu', sans-serif;
+      color: #c7c7c7; }
+    .main-conocenos div article div {
+      background-color: #c7c7c7;
+      border: 4px solid #3c3b3b;
+      border-radius: 10px; }
+      .main-conocenos div article div img {
+        height: 300px;
+        width: auto;
+        padding: 16px;
+        filter: drop-shadow(4px 6px 2px #000000); }
+      .main-conocenos div article div p {
+        color: #101010;
+        padding: 16px 22px;
+        margin-bottom: 0;
+        font-weight: bold; }
   .main-conocenos div .about-dates div {
-    background-color: #3c3b3b; }
+    background: linear-gradient(-45deg, #c7c7c7 10%, #101010 10%, #101010 90%, #c7c7c7 90%);
+    height: 100px;
+    border: 4px solid #3c3b3b; }
     .main-conocenos div .about-dates div h2 {
+      position: relative;
+      top: 12px;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      z-index: 2;
       font-size: 1.5rem;
       color: #94d56cd9; }
     .main-conocenos div .about-dates div p {
-      color: #ffffffd4;
-      font-weight: 500; }
+      position: relative;
+      top: -14px;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      z-index: auto;
+      color: #c7c7c7;
+      font-weight: 500;
+      opacity: 0; }
+    .main-conocenos div .about-dates div h2, .main-conocenos div .about-dates div p {
+      transition: opacity .5s; }
+    .main-conocenos div .about-dates div:hover h2 {
+      opacity: 0; }
+    .main-conocenos div .about-dates div:hover p {
+      opacity: 1;
+      z-index: 4; }
+  .main-conocenos div .about-dates .days h2 {
+    top: 38px; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-conocenos {
-    min-height: 1030px;
+    min-height: 1042px;
     line-height: initial; }
-    .main-conocenos div .about-dates .phone-dates {
-      margin: 8px 10px 0 10px; }
+    .main-conocenos div article {
+      width: 552px; }
     .main-conocenos div .about-dates div {
-      border-radius: 10px;
-      width: fit-content;
       min-width: 268px;
-      height: 100px;
-      padding: 10px; }
+      border: none;
+      background: none; }
       .main-conocenos div .about-dates div h2 {
-        font-size: 1.5rem; } }
+        font-size: 1.5rem;
+        top: 9px; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 28px; } }
 
 @media screen and (min-width: 992px) {
   .main-conocenos {
     min-height: 1028px;
     line-height: initial; }
-    .main-conocenos div article h1 {
-      font-size: 2rem; }
-    .main-conocenos div article p {
-      font-size: 1.2rem;
-      width: 90%; }
-    .main-conocenos div .about-dates .phone-dates {
-      margin: 8px 10px 0 10px; }
-    .main-conocenos div .about-dates div {
-      border-radius: 10px;
-      padding: 10px;
-      width: fit-content;
-      min-width: 330px;
-      height: 126px; }
-      .main-conocenos div .about-dates div h2 {
+    .main-conocenos div article {
+      min-width: 992px;
+      max-width: 1300px;
+      width: auto; }
+      .main-conocenos div article h1 {
         font-size: 2rem; }
+      .main-conocenos div article p {
+        font-size: 1.2rem; }
+    .main-conocenos div .about-dates div {
+      min-width: 330px;
+      border: none;
+      background: none; }
+      .main-conocenos div .about-dates div h2 {
+        font-size: 2rem;
+        top: 13px; }
       .main-conocenos div .about-dates div p {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 36px; } }
 
 .main-menu {
-  background-color: #1e1e1e;
+  background: #101010;
   height: calc(100vh - 154px);
   min-height: 1732px; }
   .main-menu .gradient {
     display: none; }
   .main-menu div h1 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-shadow: 3px 2px #000000;
-    font-weight: bold; }
+    font: normal bold 1.5rem 'Ubuntu', sans-serif;
+    color: #c7c7c7; }
     .main-menu div h1 span {
       display: contents;
-      color: #ffffff; }
+      color: #c7c7c7; }
   .main-menu div section {
     padding: 0 12px 12px 12px;
     width: 100vw; }
     .main-menu div section .starters-bg, .main-menu div section .burgers-bg, .main-menu div section .pizzas-bg, .main-menu div section .desserts-bg, .main-menu div section .drinks-bg, .main-menu div section .beer-bg {
       background-position: center center; }
       .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-        font-size: 1.5rem;
+        font: normal bold 1.5rem 'Ubuntu', sans-serif;
         text-shadow: none;
-        font-weight: bold;
         padding-top: 8px; }
+    .main-menu div section .starters-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .beer-bg h2 {
+      color: #ffffffd4; }
+    .main-menu div section .burgers-bg h2, .main-menu div section .drinks-bg h2 {
+      color: #040404c7; }
     .main-menu div section .starters-bg {
       background-image: url(../imagen/entradas.jpg); }
-      .main-menu div section .starters-bg h2 {
-        color: #ffffffd4; }
     .main-menu div section .burgers-bg {
       background-image: url(../imagen/hamburguesa.jpg); }
-      .main-menu div section .burgers-bg h2 {
-        color: #040404c7; }
     .main-menu div section .pizzas-bg {
       background-image: url(../imagen/pizza.jpg); }
-      .main-menu div section .pizzas-bg h2 {
-        color: #ffffffd4; }
     .main-menu div section .desserts-bg {
       background-image: url(../imagen/postres.png); }
-      .main-menu div section .desserts-bg h2 {
-        color: #ffffffd4; }
     .main-menu div section .drinks-bg {
       background-image: url(../imagen/tragos.jpg); }
-      .main-menu div section .drinks-bg h2 {
-        color: #040404c7; }
     .main-menu div section .beer-bg {
       background-image: url(../imagen/cerveza.jpg); }
-      .main-menu div section .beer-bg h2 {
-        color: #ffffffd4; }
     .main-menu div section div {
       background-size: cover;
       height: 270px; }
@@ -265,73 +300,81 @@ footer {
         opacity: .9; }
       .main-menu div section div:hover div ul {
         display: flex;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
-        list-style: none;
-        font-size: .8rem;
-        width: 100%;
-        line-height: 26px;
+        margin: 0;
         padding: 0;
-        margin: 0; }
+        font: normal normal .8rem/26px 'Ubuntu', sans-serif;
+        list-style: none;
+        width: 100%; }
       .main-menu div section div div {
+        height: 100%;
+        width: 100%;
         display: contents;
         background-color: #000000;
         opacity: 0;
-        transition: opacity .8s;
-        height: 100%;
-        width: 100%; }
+        transition: opacity .8s; }
         .main-menu div section div div ul {
           display: none; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-menu {
-    min-height: 728px;
-    background-color: transparent; }
+    background: transparent;
+    height: calc(100vh - 154px);
+    min-height: 728px; }
     .main-menu .gradient {
-      display: block;
       position: absolute;
-      height: calc(100vh - 154px);
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
       z-index: -1;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      display: block;
+      height: calc(100vh - 154px);
       min-height: 728px; }
       .main-menu .gradient .gradient-1 {
-        background: #101010;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0; }
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
       .main-menu .gradient .gradient-2 {
-        background: #c7c7c7;
-        bottom: 0;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0; }
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: auto;
+        z-index: -1; }
       .main-menu .gradient .gradient-3 {
-        background: #c7c7c7;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        right: 0; }
-      .main-menu .gradient .gradient-4 {
-        background: #101010;
-        bottom: 0;
+        top: auto;
         right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
+      .main-menu .gradient .gradient-4 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: -1; }
+      .main-menu .gradient .gradient-1, .main-menu .gradient .gradient-4 {
         height: 50%;
         width: 50%;
-        position: absolute;
-        z-index: -1;
+        margin: 0;
         padding: 0;
-        margin: 0; }
+        background: #101010; }
+      .main-menu .gradient .gradient-2, .main-menu .gradient .gradient-3 {
+        height: 50%;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        background: #c7c7c7; }
     .main-menu div h1 {
       letter-spacing: 10px;
       text-shadow: none;
@@ -344,7 +387,6 @@ footer {
     .main-menu div section {
       width: 100%;
       padding: 0;
-      border: 4px solid #6c6c6c;
       border-radius: 10px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 650px; }
@@ -371,52 +413,58 @@ footer {
 
 @media screen and (min-width: 992px) {
   .main-menu {
-    min-height: 590px;
-    background-color: transparent; }
+    background: transparent;
+    height: calc(100vh - 154px);
+    min-height: 590px; }
     .main-menu .gradient {
-      display: block;
       position: absolute;
-      height: calc(100vh - 154px);
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
       z-index: -1;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      display: block;
+      height: calc(100vh - 154px);
       min-height: 590px; }
       .main-menu .gradient .gradient-1 {
-        background: linear-gradient(-45deg, #c7c7c7 43%, #101010 43%);
-        height: 50%;
-        width: 50%;
         position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
         z-index: -1;
-        padding: 0;
-        margin: 0; }
+        background: linear-gradient(-45deg, #c7c7c7 43%, #101010 43%); }
       .main-menu .gradient .gradient-2 {
-        background: linear-gradient(-135deg, #101010 43%, #c7c7c7 43%);
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        bottom: 0; }
-      .main-menu .gradient .gradient-3 {
-        background: linear-gradient(45deg, #101010 43%, #c7c7c7 43%);
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        right: 0; }
-      .main-menu .gradient .gradient-4 {
-        background: linear-gradient(135deg, #c7c7c7 43%, #101010 43%);
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
+        top: auto;
+        right: auto;
         bottom: 0;
-        right: 0; }
+        left: auto;
+        z-index: -1;
+        background: linear-gradient(-135deg, #101010 43%, #c7c7c7 43%); }
+      .main-menu .gradient .gradient-3 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: -1;
+        background: linear-gradient(45deg, #101010 43%, #c7c7c7 43%); }
+      .main-menu .gradient .gradient-4 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: -1;
+        background: linear-gradient(135deg, #c7c7c7 43%, #101010 43%); }
+      .main-menu .gradient .gradient-1, .main-menu .gradient .gradient-2, .main-menu .gradient .gradient-3, .main-menu .gradient .gradient-4 {
+        height: 50%;
+        width: 50%;
+        margin: 0;
+        padding: 0; }
     .main-menu div h1 {
       font-size: 2rem;
       letter-spacing: 8px;
@@ -429,7 +477,6 @@ footer {
     .main-menu div section {
       width: 100%;
       padding: 0;
-      border: 4px solid #6c6c6c;
       border-radius: 10px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 1140px; }
@@ -457,19 +504,17 @@ footer {
           border-bottom-right-radius: 5px; } }
 
 .main-rye {
-  background-color: #1e1e1e;
+  background: #101010;
   height: calc(100vh - 154px);
   min-height: 1410px; }
   .main-rye .gradient {
     display: none; }
   .main-rye div h1 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-shadow: 3px 2px #000000;
-    font-weight: bold; }
+    font: normal bold 1.5rem 'Ubuntu', sans-serif;
+    color: #c7c7c7; }
   .main-rye div section {
     border: 6px double #94d56cd9;
-    background-color: #101010;
+    background-color: #1b1b1b;
     margin: 10px 0;
     max-width: 410px;
     padding: 10px 0; }
@@ -478,7 +523,7 @@ footer {
       .main-rye div section form div div h2 {
         font-size: 1.2rem;
         color: #ffffffd4; }
-      .main-rye div section form div div label {
+      .main-rye div section form div div label, .main-rye div section form div div button {
         color: #94d56cd9; }
       .main-rye div section form div div input {
         border: transparent;
@@ -488,7 +533,6 @@ footer {
       .main-rye div section form div div button {
         border-radius: 8px;
         background-color: #101010;
-        color: #94d56cd9;
         border: 2px outset #94d56cd9;
         cursor: pointer; }
         .main-rye div section form div div button:active {
@@ -497,52 +541,58 @@ footer {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-rye {
-    min-height: 804px;
-    background-color: transparent; }
+    background: transparent;
+    height: calc(100vh - 154px);
+    min-height: 804px; }
     .main-rye .gradient {
-      display: block;
       position: absolute;
-      height: calc(100vh - 154px);
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
       z-index: -1;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      display: block;
+      height: calc(100vh - 154px);
       min-height: 804px; }
       .main-rye .gradient .gradient-1 {
-        background-color: #101010;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0; }
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
       .main-rye .gradient .gradient-2 {
-        background-color: #c7c7c7;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        bottom: 0; }
-      .main-rye .gradient .gradient-3 {
-        background-color: #c7c7c7;
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        right: 0; }
-      .main-rye .gradient .gradient-4 {
-        background-color: #101010;
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
+        top: auto;
+        right: auto;
         bottom: 0;
-        right: 0; }
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-3 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-4 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3, .main-rye .gradient .gradient-4 {
+        height: 50%;
+        width: 50%;
+        margin: 0;
+        padding: 0; }
+      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-4 {
+        background-color: #101010; }
+      .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3 {
+        background-color: #c7c7c7; }
     .main-rye div h1 {
       color: #c7c7c7;
       letter-spacing: 2px;
@@ -558,56 +608,63 @@ footer {
 
 @media screen and (min-width: 992px) {
   .main-rye {
-    min-height: 802px;
-    background-color: transparent; }
+    background: transparent;
+    height: calc(100vh - 154px);
+    min-height: 802px; }
     .main-rye .gradient {
-      display: block;
       position: absolute;
-      height: calc(100vh - 154px);
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
       z-index: -1;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      display: block;
+      height: calc(100vh - 154px);
       min-height: 802px; }
       .main-rye .gradient .gradient-1 {
-        background-color: #101010;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0; }
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
       .main-rye .gradient .gradient-2 {
-        background-color: #c7c7c7;
-        height: 50%;
-        width: 50%;
         position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        bottom: 0; }
-      .main-rye .gradient .gradient-3 {
-        background-color: #c7c7c7;
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-        right: 0; }
-      .main-rye .gradient .gradient-4 {
-        background-color: #101010;
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
+        top: auto;
+        right: auto;
         bottom: 0;
-        right: 0; }
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-3 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-4 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        z-index: -1; }
+      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3, .main-rye .gradient .gradient-4 {
+        height: 50%;
+        width: 50%;
+        margin: 0;
+        padding: 0; }
+      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-4 {
+        background-color: #101010; }
+      .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3 {
+        background-color: #c7c7c7; }
     .main-rye div h1 {
       color: #c7c7c7;
       font-size: 2rem;
-      text-shadow: none; }
+      text-shadow: none;
+      letter-spacing: 2px; }
       .main-rye div h1 span {
         color: #101010;
         font-weight: bold; }
@@ -618,53 +675,50 @@ footer {
       max-width: 1300px; }
       .main-rye div section form div div h2 {
         font-size: 1.4rem; }
-      .main-rye div section form div div label {
+      .main-rye div section form div div label, .main-rye div section form div div input {
         font-size: 1.2rem; }
       .main-rye div section form div div input {
-        font-size: 1.2rem;
         max-width: 310px; } }
 
 .main-socios {
-  background-color: #1e1e1e;
+  background: #101010;
   height: calc(100vh - 154px);
-  padding: 12px 0;
-  min-height: 1050px; }
+  min-height: 1070px;
+  padding: 12px 0; }
   .main-socios div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; }
-    .main-socios div article h1 {
-      font-size: 1.5rem;
-      color: #ffffff;
-      text-shadow: 3px 2px #000000;
-      font-weight: bold; }
-    .main-socios div article p {
-      color: #ffffffd4;
-      background-color: #3c3b3b;
-      border-radius: 10px;
-      padding: 10px;
-      max-width: 430px;
-      font-weight: bold; }
-    .main-socios div article ul {
-      background-color: #3c3b3b;
-      border-radius: 10px;
-      padding: 12px 26px;
-      color: #ffffffd4;
-      font-weight: bold;
-      max-width: 430px;
-      list-style: none; }
-      .main-socios div article ul li::before {
-        content: url(../imagen/icon.png); }
+    align-items: center;
+    justify-content: space-evenly; }
+    .main-socios div article {
+      width: 304px; }
+      .main-socios div article h1 {
+        font: normal bold 1.5rem 'Ubuntu', sans-serif;
+        color: #c7c7c7; }
+      .main-socios div article p {
+        color: #101010;
+        padding: 10px; }
+      .main-socios div article ul {
+        padding: 12px 26px;
+        color: #101010;
+        list-style: none; }
+        .main-socios div article ul li::before {
+          content: url(../imagen/icon.png); }
+      .main-socios div article p, .main-socios div article ul {
+        font-weight: bold;
+        max-width: 430px;
+        border: 4px solid #3c3b3b;
+        border-radius: 10px;
+        background-color: #c7c7c7; }
     .main-socios div form {
       border: 6px double #94d56cd9;
-      background-color: #0a0a0a;
-      max-width: 340px;
+      background-color: #1b1b1b;
+      max-width: 304px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px; }
       .main-socios div form div h2 {
         font-size: 1.2rem;
         color: #ffffffd4; }
-      .main-socios div form div label {
+      .main-socios div form div label, .main-socios div form div button {
         color: #94d56cd9; }
       .main-socios div form div input {
         border: transparent;
@@ -674,7 +728,6 @@ footer {
       .main-socios div form div button {
         border-radius: 8px;
         background-color: #101010;
-        color: #94d56cd9;
         border: 2px outset #94d56cd9;
         cursor: pointer; }
         .main-socios div form div button:active {
@@ -683,49 +736,42 @@ footer {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-socios {
-    min-height: 660px; }
+    min-height: 740px; }
     .main-socios div article h1 {
       font-size: 1.5rem; }
-    .main-socios div article p {
+    .main-socios div article p, .main-socios div article ul {
       max-width: 760px; }
     .main-socios div article ul {
-      max-width: 760px;
       list-style: none; }
       .main-socios div article ul li::before {
         content: url(../imagen/icon.png); }
-    .main-socios div form {
-      width: auto;
-      max-width: 760px; }
-      .main-socios div form div input {
-        max-width: 310px; } }
+    .main-socios div article, .main-socios div form {
+      max-width: 544px; } }
 
 @media screen and (min-width: 992px) {
   .main-socios {
-    min-height: 546px; }
+    min-height: 558px; }
     .main-socios div {
       display: flex;
-      align-items: center;
       flex-direction: row;
+      align-items: center;
       justify-content: space-evenly; }
       .main-socios div article {
-        max-width: 500px; }
+        width: 668px; }
         .main-socios div article h1 {
           font-size: 2rem; }
-        .main-socios div article p {
+        .main-socios div article p, .main-socios div article ul {
           font-size: 1.2rem;
-          max-width: 500px; }
+          max-width: 600px; }
         .main-socios div article ul {
-          font-size: 1.2rem;
-          max-width: 500px;
           list-style: none; }
           .main-socios div article ul li::before {
             content: url(../imagen/icon.png); }
       .main-socios div form div h2 {
         font-size: 1.4rem; }
-      .main-socios div form div label {
+      .main-socios div form div label, .main-socios div form div input {
         font-size: 1.2rem; }
       .main-socios div form div input {
-        font-size: 1.2rem;
         max-width: 250px; } }
 
 * {

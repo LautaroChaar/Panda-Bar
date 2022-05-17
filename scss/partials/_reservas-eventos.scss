@@ -1,7 +1,7 @@
+// mobile
+
 .main-rye {
-    background-color: $bgblack;
-    height: calc(100vh - 154px);
-    min-height: 1410px;
+    @include main ( $black, calc(100vh - 154px), 1410px);
     .gradient {
         display: none;
     }
@@ -10,11 +10,12 @@
     }
     div {
         h1 {
-            @include h1;
+            font: normal bold 1.5rem 'Ubuntu', sans-serif;
+            color: $white;
         }
         section {
             border: 6px double $green;
-            background-color: $black;
+            background-color: $grey;
             margin: 10px 0;
             max-width: 410px;
             padding: 10px 0;
@@ -24,18 +25,28 @@
                     div {
                         h2 {
                             font-size: 1.2rem;
-                            color: $tcwhite;
+                            color: $white2;
                         }
                     }
                     div {
-                        label {
+                        label, button {
                             color: $green;
                         }
                         input {
-                            @include input;
+                            border: transparent;
+                            border-radius: 3px;
+                            max-width: 210px;
+                            background-image: $gradientform;
                         }
                         button {
-                            @include button;
+                            border-radius: 8px;
+                            background-color: $black;
+                            border: 2px outset $green;
+                            cursor: pointer;
+                            &:active {
+                                background-color: $green;
+                                color: $black;
+                            }
                         }
                     }
                 }
@@ -44,32 +55,38 @@
     }
 }
 
+// tablet
+
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-rye {
-        min-height: 804px;
-        background-color: transparent;
+        @include main ( transparent, calc(100vh - 154px), 804px);
         .gradient {
-            @include grad;
+            @include position (absolute, auto, auto, auto, auto, -1);
+            @include not-mp;
+            display: block;
+            height: calc(100vh - 154px);
             min-height: 804px;
             .gradient-1 {
-                background-color: #101010;
-                @include gradchild;
+                @include position (absolute, auto, auto, auto, auto, -1);
             }
             .gradient-2 {
-                background-color: #c7c7c7;
-                @include gradchild;
-                bottom: 0;
+                @include position (absolute, auto, auto, 0, auto, -1);
             }
             .gradient-3 {
-                background-color: #c7c7c7;
-                @include gradchild;
-                right: 0;
+                @include position (absolute, auto, 0, auto, auto, -1);
             }
             .gradient-4 {
-                background-color: #101010;
-                @include gradchild;
-                bottom: 0;
-                right: 0;
+                @include position (absolute, auto, 0, 0, auto, -1);
+            }
+            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
+                @include size (50%, 50%);
+                @include not-mp;
+            }
+            .gradient-1, .gradient-4 {
+                background-color: $black;
+            }
+            .gradient-2, .gradient-3 {
+                background-color: $white;
             }
         }
         div {
@@ -83,8 +100,7 @@
                 }
             }
             section {
-                height: fit-content;
-                width: auto;
+                @include size (fit-content, auto);
                 box-shadow: $boxshadow;
                 max-width: 670px;
             }
@@ -92,32 +108,38 @@
     }
 }
 
+// desktop
+
 @media screen and (min-width:992px) {
     .main-rye {
-        min-height: 802px;
-        background-color: transparent;
+        @include main ( transparent, calc(100vh - 154px), 802px);
         .gradient {
-            @include grad;
+            @include position (absolute, auto, auto, auto, auto, -1);
+            @include not-mp;
+            display: block;
+            height: calc(100vh - 154px);
             min-height: 802px;
             .gradient-1 {
-                background-color: $black;
-                @include gradchild;
+                @include position (absolute, auto, auto, auto, auto, -1);
             }
             .gradient-2 {
-                background-color: $white;
-                @include gradchild;
-                bottom: 0;
+                @include position (absolute, auto, auto, 0, auto, -1);
             }
             .gradient-3 {
-                background-color: $white;
-                @include gradchild;
-                right: 0;
+                @include position (absolute, auto, 0, auto, auto, -1);
             }
             .gradient-4 {
+                @include position (absolute, auto, 0, 0, auto, -1);
+            }
+            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
+                @include size (50%, 50%);
+                @include not-mp;
+            }
+            .gradient-1, .gradient-4 {
                 background-color: $black;
-                @include gradchild;
-                bottom: 0;
-                right: 0;
+            }
+            .gradient-2, .gradient-3 {
+                background-color: $white;
             }
         }
         div {
@@ -125,14 +147,14 @@
                 color: $white;
                 font-size: 2rem;
                 text-shadow: none;
+                letter-spacing: 2px;
                 span {
                     color: $black;
                     font-weight: bold;
                 }
             }
             section {
-                height: fit-content;
-                width: auto;
+                @include size (fit-content, auto);
                 box-shadow: $boxshadow;
                 max-width: 1300px;
                 form {
@@ -141,11 +163,10 @@
                             h2 {
                                 font-size: 1.4rem;
                             }
-                            label {
+                            label, input {
                                 font-size: 1.2rem;
                             }
                             input {
-                                font-size: 1.2rem;
                                 max-width: 310px;
                             }
                         }

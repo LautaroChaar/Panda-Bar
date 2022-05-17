@@ -1,113 +1,116 @@
+// mobile
+
 .main-socios {
-    background-color: $bgblack;
-    @include main;
-    min-height: 1050px;
+    @include main ( $black, calc(100vh - 154px), 1070px);
+    padding: 12px 0;
     div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        @include flex (flex, column, center, space-evenly);
         article {
+            width: 304px;
             h1 {
-                @include h1;
+                font: normal bold 1.5rem 'Ubuntu', sans-serif;
+                color: $white;
             }
             p {
-                color: $tcwhite;
-                background-color: $bgtext;
-                @include border;
-                max-width: 430px;
-                font-weight: bold;
+                color: $black;
+                padding: 10px;
             }
             ul {
-                background-color: $bgtext;
-                border-radius: 10px;
                 padding: 12px 26px;
-                color: $tcwhite;
-                font-weight: bold;
-                max-width: 430px;
+                color: $black;
                 list-style: none;
                 li::before {
                     content: url(../imagen/icon.png);
                 }
             }
+            p, ul {
+                font-weight: bold;
+                max-width: 430px;
+                border: 4px solid $border;
+                border-radius: 10px;
+                background-color: $white;
+            }
         }
         form {
             border: 6px double $green;
-            background-color: $blackform;
-            max-width: 340px;
+            background-color: $grey;
+            max-width: 304px;
             box-shadow: $boxshadow;
             div {
                 h2 {
                     font-size: 1.2rem;
-                    color: $tcwhite;
+                    color: $white2;
                 }
             }
             div {
-                label {
+                label, button {
                     color: $green;
                 }
                 input {
-                    @include input;
+                    border: transparent;
+                    border-radius: 3px;
+                    max-width: 210px;
+                    background-image: $gradientform;
                 }
                 button {
-                    @include button;
+                    border-radius: 8px;
+                    background-color: $black;
+                    border: 2px outset $green;
+                    cursor: pointer;
+                    &:active {
+                        background-color: $green;
+                        color: $black;
+                    }
                 }
             }
         }
     }
 }
 
+// tablet
+
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-socios {
-        min-height: 660px;
+        min-height: 740px;
         div {
             article {
                 h1 {
                     font-size: 1.5rem;
                 }
-                p {
+                p, ul {
                     max-width: 760px;
                 }
                 ul {
-                    max-width: 760px;
                     list-style: none;
                     li::before {
                         content: url(../imagen/icon.png);
                     }
                 }
             }
-            form {
-                width: auto;
-                max-width: 760px;
-                div {
-                    input {
-                        max-width: 310px;
-                    }
-                }
+            article, form {
+                max-width: 544px;
             }
         }
     }
 }
 
+// desktop
+
 @media screen and (min-width:992px) {
     .main-socios {
-        min-height: 546px;
+        min-height: 558px;
         div {
-            @include flex;
-            flex-direction: row;         
-            justify-content: space-evenly;
+            @include flex(flex, row, center, space-evenly);
             article {
-                max-width: 500px;
+                width: 668px;
                 h1 {
                     font-size: 2rem;
                 }
-                p {
+                p, ul {
                     font-size: 1.2rem;
-                    max-width: 500px;
+                    max-width: 600px;
                 }
                 ul {
-                    font-size: 1.2rem;
-                    max-width: 500px;
                     list-style: none;
                     li::before {
                         content: url(../imagen/icon.png);
@@ -121,11 +124,10 @@
                     }
                 }
                 div {
-                    label {
+                    label, input {
                         font-size: 1.2rem;
                     }
                     input {
-                        font-size: 1.2rem;
                         max-width: 250px;
                     }
                 }

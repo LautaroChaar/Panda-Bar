@@ -1,5 +1,7 @@
 // header
 
+// mobile
+
 .header-box {
     background-image: url(../imagen/encabezado.jpg);
     background-size: cover;
@@ -19,27 +21,22 @@
                 }
             }
             div {
-                position: fixed;
-                top: 0;
-                left: -12px;
-                width: 45%;
-                z-index: 1;
+                @include size (100vh, 45%);
+                @include position (fixed, 0, auto, auto, 0, 6);
                 background-color: $black;
-                height: 100vh;
-                
+                border-right: 4px solid $green;
                 ul {
                     height: 100vh;
                     li {
+                        @include flex (flex, row, center, center);
                         height: 20%;
                         border-bottom: 4px solid $green;
-                        @include flex;
-                        justify-content: center;
                         &:last-of-type {
                             border: none;
                         }
                         a {
                             font-size: .8rem;
-                            color: $tcwhite;
+                            color: $white;
                             &:hover {
                                 color: $green;
                             }
@@ -50,6 +47,8 @@
         }
     }
 }
+
+// tablet
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .header-box {
@@ -69,6 +68,8 @@
     }   
 }
 
+// desktop
+
 @media screen and (min-width:992px) {
     .header-box {
         background-image: none;
@@ -76,12 +77,11 @@
         nav{
             div {
                 div {
-                    position:inherit;
-                    width: 100%;
-                    z-index: 0;
+                    @include size (auto, 100%);
+                    @include position (inherit, auto, auto, auto, auto, 0);
                     background-color: transparent;
-                    height: auto;
                     min-height: 0;
+                    border-right: none;
                     ul {
                         height: auto;
                         min-height: 0;
@@ -89,13 +89,9 @@
                             border: none;
                             height: auto;
                             a {
+                                @include position (relative, -100px, auto, auto, auto, auto);
+                                @include animation (header, .3s, 1, forwards);
                                 font-size: 1.3rem;
-                                animation-name: header;
-                                animation-duration: .3s;
-                                animation-iteration-count: 1;
-                                animation-fill-mode: forwards;
-                                position: relative;
-                                top: -100px;
                                 height: 100%;
                                 color: $black;
                             }
@@ -119,6 +115,7 @@
 // Footer
 
 footer {
+    border-top: 6px solid $white;
     height: 77px;
     div{
         p {

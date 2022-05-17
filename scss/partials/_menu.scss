@@ -1,17 +1,18 @@
+// mobile
+
 .main-menu {
-    background-color: $bgblack;
-    height: calc(100vh - 154px);
-    min-height: 1732px;
+    @include main ( $black, calc(100vh - 154px), 1732px);
     .gradient {
         display: none;
     }
     div {
         @extend .pad;
         h1 {
-            @include h1;
+            font: normal bold 1.5rem 'Ubuntu', sans-serif;
+            color: $white;
             span {
                 display: contents;
-                color: $h1color;
+                color: $white;
             }
         }
         section {
@@ -20,76 +21,70 @@
             .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
                 background-position: center center;
                 h2 {
-                    font-size: 1.5rem;
+                    font: normal bold 1.5rem 'Ubuntu', sans-serif;
                     text-shadow: none;
-                    font-weight: bold;
                     padding-top: 8px;
+                }
+            }
+            .starters-bg, .pizzas-bg, .desserts-bg, .beer-bg {
+                h2 {
+                    color: $white2;
+                }
+            }
+            .burgers-bg, .drinks-bg {
+                h2 {
+                    color: $black2;
                 }
             }
             .starters-bg {
                 background-image: map-get($bg, starters);
-                h2 {
-                    color: $tcwhite;
-                }
             }
             .burgers-bg {
                 background-image: map-get($bg, burgers);
-                h2 {
-                    color: $tcblack;
-                }
             }
             .pizzas-bg {
                 background-image: map-get($bg, pizzas);
-                h2 {
-                    color: $tcwhite;
-                }
             }
             .desserts-bg {
                 background-image: map-get($bg, desserts);
-                h2 {
-                    color: $tcwhite;
-                }
             }
             .drinks-bg {
                 background-image: map-get($bg, drinks);                
-                h2 {
-                    color: $tcblack;
-                }
             }
             .beer-bg {
                 background-image: map-get($bg, beer);
-                h2 {
-                    color: $tcwhite;
-                }
             }
             div {
                 background-size: cover;
                 height: 270px;
-                &:hover h2 {
-                    display: none;
+                &:hover {
+                    h2 {
+                        display: none;
+                    }
                 }
-                &:hover div {
-                    display: flex;
-                    opacity: .9;
+                &:hover {
+                    div {
+                        display: flex;
+                        opacity: .9;
+                    }
                 }
-                &:hover div ul {
-                    @include flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    list-style: none;
-                    font-size: .8rem;
-                    width: 100%;
-                    line-height: 26px;
-                    padding: 0;
-                    margin: 0;
+                &:hover {
+                    div{
+                        ul {
+                            @include flex (flex, column, center, center);
+                            @include not-mp;
+                            font: normal normal .8rem/26px 'Ubuntu', sans-serif;
+                            list-style: none;
+                            width: 100%; 
+                        }
+                    }
                 }
                 div {
+                    @include size (100%, 100%);
                     display: contents;
                     background-color: #000000;
                     opacity: 0;
                     transition: opacity .8s;
-                    height: 100%;
-                    width: 100%;
                     ul {
                         display: none;
                     }
@@ -99,32 +94,38 @@
     }
 }
 
+// tablet
+
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-menu {
-        min-height: 728px;
-        background-color: transparent;
+        @include main ( transparent, calc(100vh - 154px), 728px);
         .gradient {
-            @include grad;
+            @include position (absolute, auto, auto, auto, auto, -1);
+            @include not-mp;
+            display: block;
+            height: calc(100vh - 154px);
             min-height: 728px;
             .gradient-1 {
-                background: $black;
-                @include gradchild;
+                @include position (absolute, auto, auto, auto, auto, -1); 
             }
             .gradient-2 {
-                background: $white;
-                bottom: 0;
-                @include gradchild;
+                @include position (absolute, auto, auto, 0, auto, -1);
             }
             .gradient-3 {
-                background: $white;
-                @include gradchild;
-                right: 0;
+                @include position (absolute, auto, 0, auto, auto, -1);
             }
             .gradient-4 {
+                @include position (absolute, auto, 0, 0, auto, -1);
+            }
+            .gradient-1, .gradient-4 {
+                @include size (50%, 50%);
+                @include not-mp;
                 background: $black;
-                bottom: 0;
-                right: 0;
-                @include gradchild;
+            }
+            .gradient-2, .gradient-3 {
+                @include size (50%, 50%);
+                @include not-mp;
+                background: $white;
             }
         }
         div {
@@ -142,7 +143,6 @@
             section {
                 width: 100%;
                 padding: 0;
-                border: 4px solid #6c6c6c;
                 border-radius: 10px;
                 box-shadow: $boxshadow;
                 max-width: 650px;
@@ -181,32 +181,36 @@
     }
 }
 
+// desktop
+
 @media screen and (min-width:992px) {
     .main-menu {
-        min-height: 590px;
-        background-color: transparent;
+        @include main ( transparent, calc(100vh - 154px), 590px);
         .gradient {
-            @include grad;
+            @include position (absolute, auto, auto, auto, auto, -1); 
+            @include not-mp;
+            display: block;
+            height: calc(100vh - 154px);
             min-height: 590px;
             .gradient-1 {
+                @include position (absolute, auto, auto, auto, auto, -1);
                 background: linear-gradient(-45deg, $white 43%, $black 43%);
-                @include gradchild;
             }
             .gradient-2 {
+                @include position (absolute, auto, auto, 0, auto, -1);
                 background: linear-gradient(-135deg, $black 43%, $white 43%);
-                @include gradchild;
-                bottom: 0;
             }
             .gradient-3 {
+                @include position (absolute, auto, 0, auto, auto, -1);
                 background: linear-gradient(45deg, $black 43%, $white 43%);
-                @include gradchild;
-                right: 0;
             }
             .gradient-4 {
+                @include position (absolute, auto, 0, 0, auto, -1);
                 background: linear-gradient(135deg, $white 43%, $black 43%);
-                @include gradchild;
-                bottom: 0;
-                right: 0;
+            }
+            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
+                @include size (50%, 50%);
+                @include not-mp;
             }
         }
         div {
@@ -224,7 +228,6 @@
             section {
                 width: 100%;
                 padding: 0;
-                border: 4px solid #6c6c6c;
                 border-radius: 10px;
                 box-shadow: $boxshadow;
                 max-width: 1140px;
@@ -233,8 +236,12 @@
                 }
                 div {
                     height: 256px;
-                    &:hover div ul {
-                        font-size: 1rem;
+                    &:hover {
+                        div {
+                            ul {
+                                font-size: 1rem;
+                            }
+                        }
                     }
                 }
                 .starters-menu {
