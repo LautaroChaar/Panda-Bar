@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.pad, .main-menu div, .main-rye .pad {
+.pad, .main-menu .menu-content, .main-rye .pad {
   padding-top: 12px;
   padding-bottom: 12px; }
 
@@ -161,57 +161,72 @@ footer {
   height: calc(100vh - 154px);
   min-height: 1676px;
   padding: 12px 0; }
-  .main-conocenos div article {
-    width: 304px; }
-    .main-conocenos div article h1 {
-      font: normal bold 1.5rem 'Ubuntu', sans-serif;
-      color: #c7c7c7; }
-    .main-conocenos div article div {
-      background-color: #c7c7c7;
+  .main-conocenos div {
+    animation-name: left;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
+    .main-conocenos div article {
+      width: 304px; }
+      .main-conocenos div article h1 {
+        font: normal bold 1.5rem 'Ubuntu', sans-serif;
+        color: #c7c7c7; }
+      .main-conocenos div article div {
+        border: 4px solid #3c3b3b;
+        border-radius: 10px;
+        color: transparent;
+        background: #c7c7c7; }
+        .main-conocenos div article div img {
+          height: 300px;
+          width: auto;
+          padding: 16px;
+          filter: drop-shadow(4px 6px 2px #000000); }
+        .main-conocenos div article div p {
+          color: #101010;
+          padding: 16px 22px;
+          margin-bottom: 0;
+          font-weight: bold; }
+    .main-conocenos div .about-dates div {
       border: 4px solid #3c3b3b;
-      border-radius: 10px; }
-      .main-conocenos div article div img {
-        height: 300px;
-        width: auto;
-        padding: 16px;
-        filter: drop-shadow(4px 6px 2px #000000); }
-      .main-conocenos div article div p {
-        color: #101010;
-        padding: 16px 22px;
-        margin-bottom: 0;
-        font-weight: bold; }
-  .main-conocenos div .about-dates div {
-    background: linear-gradient(-45deg, #c7c7c7 10%, #101010 10%, #101010 90%, #c7c7c7 90%);
-    height: 100px;
-    border: 4px solid #3c3b3b; }
-    .main-conocenos div .about-dates div h2 {
-      position: relative;
-      top: 12px;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: 2;
-      font-size: 1.5rem;
-      color: #94d56cd9; }
-    .main-conocenos div .about-dates div p {
-      position: relative;
-      top: -14px;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: auto;
-      color: #c7c7c7;
-      font-weight: 500;
-      opacity: 0; }
-    .main-conocenos div .about-dates div h2, .main-conocenos div .about-dates div p {
-      transition: opacity .5s; }
-    .main-conocenos div .about-dates div:hover h2 {
-      opacity: 0; }
-    .main-conocenos div .about-dates div:hover p {
-      opacity: 1;
-      z-index: 4; }
-  .main-conocenos div .about-dates .days h2 {
-    top: 38px; }
+      border-radius: 0;
+      color: transparent;
+      background: linear-gradient(-45deg, #c7c7c7 10%, #101010 10%, #101010 90%, #c7c7c7 90%);
+      height: 100px; }
+      .main-conocenos div .about-dates div h2 {
+        position: relative;
+        top: 12px;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: 2;
+        font-size: 1.5rem;
+        color: #94d56cd9; }
+      .main-conocenos div .about-dates div p {
+        position: relative;
+        top: -14px;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: auto;
+        color: #c7c7c7;
+        font-weight: 500;
+        opacity: 0; }
+      .main-conocenos div .about-dates div h2, .main-conocenos div .about-dates div p {
+        transition: opacity .5s; }
+      .main-conocenos div .about-dates div:hover h2 {
+        opacity: 0; }
+      .main-conocenos div .about-dates div:hover p {
+        opacity: 1;
+        z-index: 4; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 38px; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-conocenos {
@@ -220,9 +235,11 @@ footer {
     .main-conocenos div article {
       width: 552px; }
     .main-conocenos div .about-dates div {
-      min-width: 268px;
       border: none;
-      background: none; }
+      border-radius: 0;
+      color: transparent;
+      background: none;
+      min-width: 268px; }
       .main-conocenos div .about-dates div h2 {
         font-size: 1.5rem;
         top: 9px; }
@@ -244,6 +261,8 @@ footer {
     .main-conocenos div .about-dates div {
       min-width: 330px;
       border: none;
+      border-radius: 0;
+      color: transparent;
       background: none; }
       .main-conocenos div .about-dates div h2 {
         font-size: 2rem;
@@ -259,64 +278,76 @@ footer {
   min-height: 1732px; }
   .main-menu .gradient {
     display: none; }
-  .main-menu div h1 {
-    font: normal bold 1.5rem 'Ubuntu', sans-serif;
-    color: #c7c7c7; }
-    .main-menu div h1 span {
-      display: contents;
+  .main-menu .menu-content {
+    animation-name: left;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
+    .main-menu .menu-content h1 {
+      font: normal bold 1.5rem 'Ubuntu', sans-serif;
       color: #c7c7c7; }
-  .main-menu div section {
-    padding: 0 12px 12px 12px;
-    width: 100vw; }
-    .main-menu div section .starters-bg, .main-menu div section .burgers-bg, .main-menu div section .pizzas-bg, .main-menu div section .desserts-bg, .main-menu div section .drinks-bg, .main-menu div section .beer-bg {
-      background-position: center center; }
-      .main-menu div section .starters-bg h2, .main-menu div section .burgers-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .drinks-bg h2, .main-menu div section .beer-bg h2 {
-        font: normal bold 1.5rem 'Ubuntu', sans-serif;
-        text-shadow: none;
-        padding-top: 8px; }
-    .main-menu div section .starters-bg h2, .main-menu div section .pizzas-bg h2, .main-menu div section .desserts-bg h2, .main-menu div section .beer-bg h2 {
-      color: #ffffffd4; }
-    .main-menu div section .burgers-bg h2, .main-menu div section .drinks-bg h2 {
-      color: #040404c7; }
-    .main-menu div section .starters-bg {
-      background-image: url(../imagen/entradas.jpg); }
-    .main-menu div section .burgers-bg {
-      background-image: url(../imagen/hamburguesa.jpg); }
-    .main-menu div section .pizzas-bg {
-      background-image: url(../imagen/pizza.jpg); }
-    .main-menu div section .desserts-bg {
-      background-image: url(../imagen/postres.png); }
-    .main-menu div section .drinks-bg {
-      background-image: url(../imagen/tragos.jpg); }
-    .main-menu div section .beer-bg {
-      background-image: url(../imagen/cerveza.jpg); }
-    .main-menu div section div {
-      background-size: cover;
-      height: 270px; }
-      .main-menu div section div:hover h2 {
-        display: none; }
-      .main-menu div section div:hover div {
-        display: flex;
-        opacity: .9; }
-        .main-menu div section div:hover div ul {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          margin: 0;
-          padding: 0;
-          font: normal normal .8rem/26px 'Ubuntu', sans-serif;
-          list-style: none;
-          width: 100%; }
-      .main-menu div section div div {
-        height: 100%;
-        width: 100%;
+      .main-menu .menu-content h1 span {
         display: contents;
-        background-color: #000000;
-        opacity: 0;
-        transition: opacity .8s; }
-        .main-menu div section div div ul {
+        color: #c7c7c7; }
+    .main-menu .menu-content section {
+      padding: 0 12px 12px 12px;
+      width: 100vw; }
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
+        background-position: center center; }
+        .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .burgers-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .drinks-bg h2, .main-menu .menu-content section .beer-bg h2 {
+          font: normal bold 1.5rem 'Ubuntu', sans-serif;
+          text-shadow: none;
+          padding-top: 8px; }
+      .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .beer-bg h2 {
+        color: #ffffffd4; }
+      .main-menu .menu-content section .burgers-bg h2, .main-menu .menu-content section .drinks-bg h2 {
+        color: #040404c7; }
+      .main-menu .menu-content section .starters-bg {
+        background-image: url(../imagen/entradas.jpg); }
+      .main-menu .menu-content section .burgers-bg {
+        background-image: url(../imagen/hamburguesa.jpg); }
+      .main-menu .menu-content section .pizzas-bg {
+        background-image: url(../imagen/pizza.jpg); }
+      .main-menu .menu-content section .desserts-bg {
+        background-image: url(../imagen/postres.png); }
+      .main-menu .menu-content section .drinks-bg {
+        background-image: url(../imagen/tragos.jpg); }
+      .main-menu .menu-content section .beer-bg {
+        background-image: url(../imagen/cerveza.jpg); }
+      .main-menu .menu-content section div {
+        background-size: cover;
+        height: 270px; }
+        .main-menu .menu-content section div:hover h2 {
           display: none; }
+        .main-menu .menu-content section div:hover div {
+          display: flex;
+          opacity: .9; }
+          .main-menu .menu-content section div:hover div ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font: normal normal .8rem/26px 'Ubuntu', sans-serif;
+            list-style: none;
+            width: 100%; }
+        .main-menu .menu-content section div div {
+          height: 100%;
+          width: 100%;
+          display: contents;
+          background-color: #000000;
+          opacity: 0;
+          transition: opacity .8s; }
+          .main-menu .menu-content section div div ul {
+            display: none; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-menu {
@@ -375,40 +406,40 @@ footer {
         margin: 0;
         padding: 0;
         background: #c7c7c7; }
-    .main-menu div h1 {
+    .main-menu .menu-content h1 {
       letter-spacing: 10px;
       text-shadow: none;
       color: #101010;
       font-weight: bold; }
-      .main-menu div h1 span {
+      .main-menu .menu-content h1 span {
         display: contents;
         font-weight: bold;
         color: #c7c7c7; }
-    .main-menu div section {
+    .main-menu .menu-content section {
       width: 100%;
       padding: 0;
       border-radius: 10px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 650px; }
-      .main-menu div section .starters-bg, .main-menu div section .burgers-bg, .main-menu div section .pizzas-bg, .main-menu div section .desserts-bg, .main-menu div section .drinks-bg, .main-menu div section .beer-bg {
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
         background-size: contain; }
-      .main-menu div section div {
+      .main-menu .menu-content section div {
         height: 220px; }
-      .main-menu div section .starters-menu {
+      .main-menu .menu-content section .starters-menu {
         border-top-left-radius: 5px; }
-        .main-menu div section .starters-menu div {
+        .main-menu .menu-content section .starters-menu div {
           border-top-left-radius: 5px; }
-      .main-menu div section .burgers-menu {
+      .main-menu .menu-content section .burgers-menu {
         border-top-right-radius: 5px; }
-        .main-menu div section .burgers-menu div {
+        .main-menu .menu-content section .burgers-menu div {
           border-top-right-radius: 5px; }
-      .main-menu div section .drinks-menu {
+      .main-menu .menu-content section .drinks-menu {
         border-bottom-left-radius: 5px; }
-        .main-menu div section .drinks-menu div {
+        .main-menu .menu-content section .drinks-menu div {
           border-bottom-left-radius: 5px; }
-      .main-menu div section .beer-menu {
+      .main-menu .menu-content section .beer-menu {
         border-bottom-right-radius: 5px; }
-        .main-menu div section .beer-menu div {
+        .main-menu .menu-content section .beer-menu div {
           border-bottom-right-radius: 5px; } }
 
 @media screen and (min-width: 992px) {
@@ -465,48 +496,48 @@ footer {
         width: 50%;
         margin: 0;
         padding: 0; }
-    .main-menu div h1 {
+    .main-menu .menu-content h1 {
       font-size: 2rem;
       letter-spacing: 8px;
       text-shadow: none;
       color: #c7c7c7; }
-      .main-menu div h1 span {
+      .main-menu .menu-content h1 span {
         display: contents;
         font-weight: bolder;
         color: #101010; }
-    .main-menu div section {
+    .main-menu .menu-content section {
       width: 100%;
       padding: 0;
       border-radius: 10px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
       max-width: 1140px; }
-      .main-menu div section .starters-bg, .main-menu div section .burgers-bg, .main-menu div section .pizzas-bg, .main-menu div section .desserts-bg, .main-menu div section .drinks-bg, .main-menu div section .beer-bg {
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
         background-size: contain; }
-      .main-menu div section div {
+      .main-menu .menu-content section div {
         height: 256px; }
-        .main-menu div section div:hover div ul {
+        .main-menu .menu-content section div:hover div ul {
           font-size: 1rem; }
-      .main-menu div section .starters-menu {
+      .main-menu .menu-content section .starters-menu {
         border-top-left-radius: 5px; }
-        .main-menu div section .starters-menu div {
+        .main-menu .menu-content section .starters-menu div {
           border-top-left-radius: 5px; }
-      .main-menu div section .pizzas-menu {
+      .main-menu .menu-content section .pizzas-menu {
         border-top-right-radius: 5px; }
-        .main-menu div section .pizzas-menu div {
+        .main-menu .menu-content section .pizzas-menu div {
           border-top-right-radius: 5px; }
-      .main-menu div section .desserts-menu {
+      .main-menu .menu-content section .desserts-menu {
         border-bottom-left-radius: 5px; }
-        .main-menu div section .desserts-menu div {
+        .main-menu .menu-content section .desserts-menu div {
           border-bottom-left-radius: 5px; }
-      .main-menu div section .beer-menu {
+      .main-menu .menu-content section .beer-menu {
         border-bottom-right-radius: 5px; }
-        .main-menu div section .beer-menu div {
+        .main-menu .menu-content section .beer-menu div {
           border-bottom-right-radius: 5px; } }
 
 .main-rye {
   background: #101010;
   height: calc(100vh - 154px);
-  min-height: 1410px; }
+  min-height: 1412px; }
   .main-rye .gradient {
     display: none; }
   .main-rye div h1 {
@@ -514,36 +545,64 @@ footer {
     color: #c7c7c7; }
   .main-rye div section {
     border: 6px double #94d56cd9;
-    background-color: #1b1b1b;
+    border-radius: 0;
+    color: transparent;
+    background: #1b1b1b;
     margin: 10px 0;
     max-width: 410px;
     padding: 10px 0; }
     .main-rye div section form {
       margin-bottom: 16px; }
-      .main-rye div section form div div h2 {
-        font-size: 1.2rem;
-        color: #ffffffd4; }
-      .main-rye div section form div div label, .main-rye div section form div div button {
-        color: #94d56cd9; }
-      .main-rye div section form div div input {
-        border: transparent;
-        border-radius: 3px;
-        max-width: 210px;
-        background-image: linear-gradient(to top, #34313161, #ffffffd4); }
-      .main-rye div section form div div button {
-        border-radius: 8px;
-        background-color: #101010;
-        border: 2px outset #94d56cd9;
-        cursor: pointer; }
-        .main-rye div section form div div button:active {
-          background-color: #94d56cd9;
-          color: #101010; }
+      .main-rye div section form div {
+        animation-name: font;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+
+@keyframes font {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+        .main-rye div section form div div h2 {
+          font-size: 1.2rem;
+          color: #ffffffd4; }
+        .main-rye div section form div div label {
+          color: #94d56cd9; }
+        .main-rye div section form div div input {
+          border: transparent;
+          border-radius: 3px;
+          color: #3c3b3b;
+          background: transparent;
+          border-bottom: 2px solid #3c3b3b;
+          max-width: 210px; }
+          .main-rye div section form div div input::placeholder {
+            color: #3c3b3b; }
+          .main-rye div section form div div input:focus {
+            border: transparent;
+            border-radius: 3px;
+            color: #c7c7c7;
+            background: transparent;
+            box-shadow: none;
+            border-bottom: 2px solid #ae7e5c; }
+        .main-rye div section form div div button {
+          border: none;
+          border-radius: 12px;
+          color: #1b1b1b;
+          background: #3c3b3b;
+          padding: 2px 8px;
+          cursor: pointer; }
+          .main-rye div section form div div button:hover {
+            border: none;
+            border-radius: 12px;
+            color: #ae7e5c;
+            background: #1b1b1b; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-rye {
     background: transparent;
     height: calc(100vh - 154px);
-    min-height: 804px; }
+    min-height: 806px; }
     .main-rye .gradient {
       position: absolute;
       top: auto;
@@ -555,7 +614,7 @@ footer {
       padding: 0;
       display: block;
       height: calc(100vh - 154px);
-      min-height: 804px; }
+      min-height: 806px; }
       .main-rye .gradient .gradient-1 {
         position: absolute;
         top: auto;
@@ -610,7 +669,7 @@ footer {
   .main-rye {
     background: transparent;
     height: calc(100vh - 154px);
-    min-height: 802px; }
+    min-height: 788px; }
     .main-rye .gradient {
       position: absolute;
       top: auto;
@@ -622,7 +681,7 @@ footer {
       padding: 0;
       display: block;
       height: calc(100vh - 154px);
-      min-height: 802px; }
+      min-height: 788px; }
       .main-rye .gradient .gradient-1 {
         position: absolute;
         top: auto;
@@ -691,48 +750,86 @@ footer {
     align-items: center;
     justify-content: space-evenly; }
     .main-socios div article {
+      animation-name: left;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      position: relative;
       width: 304px; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
       .main-socios div article h1 {
         font: normal bold 1.5rem 'Ubuntu', sans-serif;
         color: #c7c7c7; }
       .main-socios div article p {
-        color: #101010;
         padding: 10px; }
       .main-socios div article ul {
         padding: 12px 26px;
-        color: #101010;
         list-style: none; }
         .main-socios div article ul li::before {
           content: url(../imagen/icon.png); }
       .main-socios div article p, .main-socios div article ul {
-        font-weight: bold;
-        max-width: 430px;
         border: 4px solid #3c3b3b;
         border-radius: 10px;
-        background-color: #c7c7c7; }
+        color: #101010;
+        background: #c7c7c7;
+        font-weight: bold;
+        max-width: 430px; }
     .main-socios div form {
       border: 6px double #94d56cd9;
-      background-color: #1b1b1b;
+      border-radius: 0;
+      color: transparent;
+      background: #1b1b1b;
       max-width: 304px;
       box-shadow: #000000 0 10px 20px, #000000 0 6px 6px; }
-      .main-socios div form div h2 {
-        font-size: 1.2rem;
-        color: #ffffffd4; }
-      .main-socios div form div label, .main-socios div form div button {
-        color: #94d56cd9; }
-      .main-socios div form div input {
-        border: transparent;
-        border-radius: 3px;
-        max-width: 210px;
-        background-image: linear-gradient(to top, #34313161, #ffffffd4); }
-      .main-socios div form div button {
-        border-radius: 8px;
-        background-color: #101010;
-        border: 2px outset #94d56cd9;
-        cursor: pointer; }
-        .main-socios div form div button:active {
-          background-color: #94d56cd9;
-          color: #101010; }
+      .main-socios div form div {
+        animation-name: font;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+
+@keyframes font {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+        .main-socios div form div h2 {
+          font-size: 1.2rem;
+          color: #ffffffd4; }
+        .main-socios div form div label {
+          color: #94d56cd9; }
+        .main-socios div form div input {
+          border: transparent;
+          border-radius: 3px;
+          color: #3c3b3b;
+          background: transparent;
+          border-bottom: 2px solid #3c3b3b;
+          max-width: 210px; }
+          .main-socios div form div input::placeholder {
+            color: #3c3b3b; }
+          .main-socios div form div input:focus {
+            border: transparent;
+            border-radius: 0;
+            color: #c7c7c7;
+            background: transparent;
+            box-shadow: none;
+            border-bottom: 2px solid #ae7e5c; }
+        .main-socios div form div button {
+          border: none;
+          border-radius: 12px;
+          color: #1b1b1b;
+          background: #3c3b3b;
+          padding: 2px 8px;
+          cursor: pointer; }
+          .main-socios div form div button:hover {
+            border: none;
+            border-radius: 12px;
+            color: #ae7e5c;
+            background: #1b1b1b; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-socios {

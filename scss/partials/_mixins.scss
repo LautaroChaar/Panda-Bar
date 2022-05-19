@@ -36,3 +36,32 @@
     margin: 0;
     padding: 0;
 }
+
+@mixin border ($border, $b-radius, $color, $background){
+    border: $border;
+    border-radius: $b-radius;
+    color: $color;
+    background: $background;
+}
+
+@mixin left-animation {
+    @keyframes left {
+        0%{
+            left: -1000px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+}
+
+@mixin font-animation {
+    @keyframes font {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}

@@ -5,8 +5,11 @@
     .gradient {
         display: none;
     }
-    div {
+    .menu-content {
+        @include animation (left, .3s, 1, forwards);
+        @include left-animation;
         @extend .pad;
+        position: relative;
         h1 {
             font: normal bold 1.5rem 'Ubuntu', sans-serif;
             color: $white;
@@ -122,7 +125,7 @@
                 background: $white;
             }
         }
-        div {
+        .menu-content {
             h1 {
                 letter-spacing: 10px;
                 text-shadow: none;
@@ -207,7 +210,7 @@
                 @include not-mp;
             }
         }
-        div {
+        .menu-content  {
             h1 {
                 font-size: 2rem;
                 letter-spacing: 8px;

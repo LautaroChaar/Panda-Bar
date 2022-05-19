@@ -1,7 +1,7 @@
 // mobile
 
 .main-rye {
-    @include main ( $black, calc(100vh - 154px), 1410px);
+    @include main ( $black, calc(100vh - 154px), 1412px);
     .gradient {
         display: none;
     }
@@ -14,14 +14,16 @@
             color: $white;
         }
         section {
-            border: 6px double $green;
-            background-color: $grey;
+            @include border (6px double $green, 0, transparent, $grey);
             margin: 10px 0;
             max-width: 410px;
             padding: 10px 0;
             form {
+                
                 margin-bottom: 16px;
                 div {
+                    @include animation (font, 1s, 1, forwards);
+                    @include font-animation;
                     div {
                         h2 {
                             font-size: 1.2rem;
@@ -29,23 +31,28 @@
                         }
                     }
                     div {
-                        label, button {
+                        label {
                             color: $green;
                         }
                         input {
-                            border: transparent;
-                            border-radius: 3px;
+                            @include border (transparent, 3px, $border, transparent);
+                            border-bottom: 2px solid $border;
                             max-width: 210px;
-                            background-image: $gradientform;
+                            &::placeholder { 
+                                color: $border;
+                            }
+                            &:focus {
+                                @include border (transparent, 3px, $white, transparent);
+                                box-shadow: none;
+                                border-bottom: 2px solid $orange;
+                            }
                         }
                         button {
-                            border-radius: 8px;
-                            background-color: $black;
-                            border: 2px outset $green;
+                            @include border (none, 12px, $grey, $border);
+                            padding: 2px 8px;
                             cursor: pointer;
-                            &:active {
-                                background-color: $green;
-                                color: $black;
+                            &:hover {
+                                @include border (none, 12px, $orange, $grey);
                             }
                         }
                     }
@@ -59,13 +66,13 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-rye {
-        @include main ( transparent, calc(100vh - 154px), 804px);
+        @include main ( transparent, calc(100vh - 154px), 806px);
         .gradient {
             @include position (absolute, auto, auto, auto, auto, -1);
             @include not-mp;
             display: block;
             height: calc(100vh - 154px);
-            min-height: 804px;
+            min-height: 806px;
             .gradient-1 {
                 @include position (absolute, auto, auto, auto, auto, -1);
             }
@@ -112,13 +119,13 @@
 
 @media screen and (min-width:992px) {
     .main-rye {
-        @include main ( transparent, calc(100vh - 154px), 802px);
+        @include main ( transparent, calc(100vh - 154px), 788px);
         .gradient {
             @include position (absolute, auto, auto, auto, auto, -1);
             @include not-mp;
             display: block;
             height: calc(100vh - 154px);
-            min-height: 802px;
+            min-height: 788px;
             .gradient-1 {
                 @include position (absolute, auto, auto, auto, auto, -1);
             }
