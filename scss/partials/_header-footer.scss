@@ -35,8 +35,7 @@
                             border: none;
                         }
                         a {
-                            font-size: .8rem;
-                            color: $white;
+                            @include font (.8rem, $white);
                             &:hover {
                                 color: $green;
                             }
@@ -91,9 +90,8 @@
                             a {
                                 @include position (relative, -100px, auto, auto, auto, auto);
                                 @include animation (header, .3s, 1, forwards);
-                                font-size: 1.3rem;
+                                @include font (1.3rem, $black);
                                 height: 100%;
-                                color: $black;
                             }
                         }
                     }
@@ -120,8 +118,7 @@ footer {
     div{
         p {
         margin: 0;
-        color: $white;
-        font-size: .5rem;
+        @include font (.5rem, $white);
         }
     }
 }

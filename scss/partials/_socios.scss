@@ -38,8 +38,7 @@
                 @include animation (font, 1s, 1, forwards);
                 @include font-animation;
                 h2 {
-                    font-size: 1.2rem;
-                    color: $white2;
+                    @include font (1.2rem, $white2);
                 }
                 label {
                     color: $green;

@@ -2,9 +2,6 @@
 
 .main-menu {
     @include main ( $black, calc(100vh - 154px), 1732px);
-    .gradient {
-        display: none;
-    }
     .menu-content {
         @include animation (left, .3s, 1, forwards);
         @include left-animation;
@@ -14,8 +11,7 @@
             font: normal bold 1.5rem 'Ubuntu', sans-serif;
             color: $white;
             span {
-                display: contents;
-                color: $white;
+                @extend .span;
             }
         }
         section {
@@ -24,7 +20,7 @@
             .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
                 background-position: center center;
                 h2 {
-                    font: normal bold 1.5rem 'Ubuntu', sans-serif;
+                    font: normal bold 1.2rem 'Ubuntu', sans-serif;
                     text-shadow: none;
                     padding-top: 8px;
                 }
@@ -57,7 +53,7 @@
             .beer-bg {
                 background-image: map-get($bg, beer);
             }
-            div {
+            article {
                 background-size: cover;
                 height: 270px;
                 &:hover {
@@ -95,36 +91,7 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-menu {
-        @include main ( transparent, calc(100vh - 154px), 728px);
-        .gradient {
-            @include position (absolute, auto, auto, auto, auto, -1);
-            @include not-mp;
-            display: block;
-            height: calc(100vh - 154px);
-            min-height: 728px;
-            .gradient-1 {
-                @include position (absolute, auto, auto, auto, auto, -1); 
-            }
-            .gradient-2 {
-                @include position (absolute, auto, auto, 0, auto, -1);
-            }
-            .gradient-3 {
-                @include position (absolute, auto, 0, auto, auto, -1);
-            }
-            .gradient-4 {
-                @include position (absolute, auto, 0, 0, auto, -1);
-            }
-            .gradient-1, .gradient-4 {
-                @include size (50%, 50%);
-                @include not-mp;
-                background: $black;
-            }
-            .gradient-2, .gradient-3 {
-                @include size (50%, 50%);
-                @include not-mp;
-                background: $white;
-            }
-        }
+        @include main ($gradient, calc(100vh - 154px), 728px);
         .menu-content {
             h1 {
                 letter-spacing: 10px;
@@ -132,9 +99,7 @@
                 color: $black;
                 font-weight: bold;
                 span {
-                    display: contents;
                     font-weight: bold;
-                    color: $white;
                 }
             }
             section {
@@ -146,31 +111,31 @@
                 .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
                     background-size: contain;
                 }
-                div {
+                article {
                     height: 220px;
                 }
                 .starters-menu {
-                    border-top-left-radius: 5px;
+                    border-top-left-radius: 10px;
                     div {
-                        border-top-left-radius: 5px;
+                        border-top-left-radius: 10px;
                     }
                 }
                 .burgers-menu {
-                    border-top-right-radius: 5px;
+                    border-top-right-radius: 10px;
                     div {
-                        border-top-right-radius: 5px;
+                        border-top-right-radius: 10px;
                     }
                 }
                 .drinks-menu {
-                    border-bottom-left-radius: 5px;
+                    border-bottom-left-radius: 10px;
                     div {
-                        border-bottom-left-radius: 5px;
+                        border-bottom-left-radius: 10px;
                     }
                 }
                 .beer-menu {
-                    border-bottom-right-radius: 5px;
+                    border-bottom-right-radius: 10px;
                     div {
-                        border-bottom-right-radius: 5px;
+                        border-bottom-right-radius: 10px;
                     }
                 }
             }
@@ -182,44 +147,14 @@
 
 @media screen and (min-width:992px) {
     .main-menu {
-        @include main ( transparent, calc(100vh - 154px), 590px);
-        .gradient {
-            @include position (absolute, auto, auto, auto, auto, -1); 
-            @include not-mp;
-            display: block;
-            height: calc(100vh - 154px);
-            min-height: 590px;
-            .gradient-1 {
-                @include position (absolute, auto, auto, auto, auto, -1);
-                background: linear-gradient(-45deg, $white 43%, $black 43%);
-            }
-            .gradient-2 {
-                @include position (absolute, auto, auto, 0, auto, -1);
-                background: linear-gradient(-135deg, $black 43%, $white 43%);
-            }
-            .gradient-3 {
-                @include position (absolute, auto, 0, auto, auto, -1);
-                background: linear-gradient(45deg, $black 43%, $white 43%);
-            }
-            .gradient-4 {
-                @include position (absolute, auto, 0, 0, auto, -1);
-                background: linear-gradient(135deg, $white 43%, $black 43%);
-            }
-            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
-                @include size (50%, 50%);
-                @include not-mp;
-            }
-        }
-        .menu-content  {
+        @include main ($gradient, calc(100vh - 154px), 590px);
+        .menu-content {
             h1 {
-                font-size: 2rem;
-                letter-spacing: 8px;
+                @include font (2rem, $black);
+                letter-spacing: 14px;
                 text-shadow: none;
-                color: $white;
                 span {
-                    display: contents;
                     font-weight: bolder;
-                    color: $black;
                 }
             }
             section {
@@ -231,7 +166,7 @@
                 .starters-bg, .burgers-bg , .pizzas-bg , .desserts-bg , .drinks-bg , .beer-bg  {
                     background-size: contain;
                 }
-                div {
+                article {
                     height: 256px;
                     &:hover {
                         div {
@@ -242,27 +177,27 @@
                     }
                 }
                 .starters-menu {
-                    border-top-left-radius: 5px;
+                    border-top-left-radius: 10px;
                     div {
-                        border-top-left-radius: 5px;
+                        border-top-left-radius: 10px;
                     }
                 }
                 .pizzas-menu {
-                    border-top-right-radius: 5px;
+                    border-top-right-radius: 10px;
                     div {
-                        border-top-right-radius: 5px;
+                        border-top-right-radius: 10px;
                     }
                 }
                 .desserts-menu {
-                    border-bottom-left-radius: 5px;
+                    border-bottom-left-radius: 10px;
                     div {
-                        border-bottom-left-radius: 5px;
+                        border-bottom-left-radius: 10px;
                     }
                 }
                 .beer-menu {
-                    border-bottom-right-radius: 5px;
+                    border-bottom-right-radius: 10px;
                     div {
-                        border-bottom-right-radius: 5px;
+                        border-bottom-right-radius: 10px;
                     }
                 }
             }

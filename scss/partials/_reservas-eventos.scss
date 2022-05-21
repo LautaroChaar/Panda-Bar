@@ -2,9 +2,6 @@
 
 .main-rye {
     @include main ( $black, calc(100vh - 154px), 1412px);
-    .gradient {
-        display: none;
-    }
     .pad {
         @extend .pad;
     }
@@ -12,6 +9,9 @@
         h1 {
             font: normal bold 1.5rem 'Ubuntu', sans-serif;
             color: $white;
+            span {
+                @extend .span;
+            }
         }
         section {
             @include border (6px double $green, 0, transparent, $grey);
@@ -19,15 +19,13 @@
             max-width: 410px;
             padding: 10px 0;
             form {
-                
                 margin-bottom: 16px;
                 div {
                     @include animation (font, 1s, 1, forwards);
                     @include font-animation;
                     div {
                         h2 {
-                            font-size: 1.2rem;
-                            color: $white2;
+                            @include font (1.2rem, $white2);
                         }
                     }
                     div {
@@ -66,45 +64,12 @@
 
 @media screen and (min-width: 576px) and (max-width:991px) {
     .main-rye {
-        @include main ( transparent, calc(100vh - 154px), 806px);
-        .gradient {
-            @include position (absolute, auto, auto, auto, auto, -1);
-            @include not-mp;
-            display: block;
-            height: calc(100vh - 154px);
-            min-height: 806px;
-            .gradient-1 {
-                @include position (absolute, auto, auto, auto, auto, -1);
-            }
-            .gradient-2 {
-                @include position (absolute, auto, auto, 0, auto, -1);
-            }
-            .gradient-3 {
-                @include position (absolute, auto, 0, auto, auto, -1);
-            }
-            .gradient-4 {
-                @include position (absolute, auto, 0, 0, auto, -1);
-            }
-            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
-                @include size (50%, 50%);
-                @include not-mp;
-            }
-            .gradient-1, .gradient-4 {
-                background-color: $black;
-            }
-            .gradient-2, .gradient-3 {
-                background-color: $white;
-            }
-        }
+        @include main ($gradient, calc(100vh - 154px), 806px);
         div {
             h1 {
-                color: $white;
+                color: $black;
                 letter-spacing: 2px;
                 text-shadow: none;
-                span {
-                    color: $black;
-                    font-weight: bold;
-                }
             }
             section {
                 @include size (fit-content, auto);
@@ -119,46 +84,12 @@
 
 @media screen and (min-width:992px) {
     .main-rye {
-        @include main ( transparent, calc(100vh - 154px), 788px);
-        .gradient {
-            @include position (absolute, auto, auto, auto, auto, -1);
-            @include not-mp;
-            display: block;
-            height: calc(100vh - 154px);
-            min-height: 788px;
-            .gradient-1 {
-                @include position (absolute, auto, auto, auto, auto, -1);
-            }
-            .gradient-2 {
-                @include position (absolute, auto, auto, 0, auto, -1);
-            }
-            .gradient-3 {
-                @include position (absolute, auto, 0, auto, auto, -1);
-            }
-            .gradient-4 {
-                @include position (absolute, auto, 0, 0, auto, -1);
-            }
-            .gradient-1, .gradient-2, .gradient-3, .gradient-4 {
-                @include size (50%, 50%);
-                @include not-mp;
-            }
-            .gradient-1, .gradient-4 {
-                background-color: $black;
-            }
-            .gradient-2, .gradient-3 {
-                background-color: $white;
-            }
-        }
+        @include main ($gradient, calc(100vh - 154px), 788px);
         div {
             h1 {
-                color: $white;
-                font-size: 2rem;
+                @include font (2rem, $black);
                 text-shadow: none;
                 letter-spacing: 2px;
-                span {
-                    color: $black;
-                    font-weight: bold;
-                }
             }
             section {
                 @include size (fit-content, auto);

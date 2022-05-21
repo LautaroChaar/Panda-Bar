@@ -45,14 +45,8 @@
             </div>
         </header>
         <main class="row m-0 main-rye">
-            <div class="col gradient">
-                <div class="row gradient-1"></div>
-                <div class="row gradient-2"></div>
-                <div class="row gradient-3"></div>
-                <div class="row gradient-4"></div>
-            </div>
             <div class="col d-flex flex-column justify-content-center align-items-center h-100 pad">
-                <h1>Hace tu <span>reserva</span></h1>
+                <h1><span>Hace tu</span> reserva</span></h1>
                 <section class="row align-items-center gy-3">
                     <form class="col-12 col-sm-6 col-lg-12">
                         <div class="row">
@@ -61,27 +55,27 @@
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-name" class="fw-bold form-label">Nombre y Apellido</label>
-                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" id="reserve-name">
+                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" name="reserve-name">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-tel" class="fw-bold form-label">Número de Teléfono</label>
-                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" id="reserve-tel">
+                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" name="reserve-tel">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-email" class="fw-bold form-label">Email</label>
-                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" id="reserve-email">
+                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" name="reserve-email">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-day" class="fw-bold form-label">Fecha</label>
-                                <input type="date" required class="text-center fw-bold form-control" id="reserve-day">
+                                <input type="date" required class="text-center fw-bold form-control" name="reserve-day">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-time" class="fw-bold form-label">Horario</label>
-                                <input type="time" required class="text-center fw-bold form-control" id="reserve-time">
+                                <input type="time" required class="text-center fw-bold form-control" name="reserve-time">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="reserve-persons" class="fw-bold form-label">Cantidad de Personas</label>
-                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" id="reserve-persons">
+                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" name="reserve-persons">
                             </div>
                             <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
                                 <button type="submit" class="fw-bold">Solicitar Reserva</button>
@@ -95,31 +89,31 @@
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-name" class="fw-bold form-label">Nombre y Apellido</label>
-                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" id="event-name">
+                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" name="event-name">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-tel" class="fw-bold form-label">Número de Teléfono</label>
-                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" id="event-tel">
+                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" name="event-tel">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-email" class="fw-bold form-label">Email</label>
-                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" id="event-email">
+                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" name="event-email">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-company" class="fw-bold form-label">Empresa</label>
-                                <input type="text" placeholder="Empresa" required  class="text-center fw-bold form-control" id="event-company">
+                                <input type="text" placeholder="Empresa" required  class="text-center fw-bold form-control" name="event-company">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-day" class="fw-bold form-label">Fecha</label>
-                                <input type="date" required class="text-center fw-bold form-control" id="event-day">
+                                <input type="date" required class="text-center fw-bold form-control" name="event-day">
                             </div>
                             <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
                                 <label for="event-time" class="fw-bold form-label">Horario</label>
-                                <input type="time" required class="text-center fw-bold form-control" id="event-time">
+                                <input type="time" required class="text-center fw-bold form-control" name="event-time">
                             </div>
                             <div class="col-12 col-lg-12 d-flex flex-column align-items-center mb-3">
                                 <label for="event-persons" class="fw-bold form-label">Cantidad de Personas</label>
-                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" id="event-persons">
+                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" name="event-persons">
                             </div>
                             <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
                                 <button type="submit" class="fw-bold">Solicitar Evento</button>

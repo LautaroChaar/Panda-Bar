@@ -24,7 +24,6 @@
                     color: $black;
                     padding: 16px 22px;
                     margin-bottom: 0;
-                    font-weight: bold;
                 }
             }
         }
@@ -35,8 +34,7 @@
                 height: 100px;
                 h2 {
                     @include position (relative, 12px, auto, auto, auto, 2);
-                    font-size: 1.5rem;
-                    color: $green;
+                    @include font (1.5rem, $green);
                 }
                 p {
                     @include position (relative, -14px, auto, auto, auto, auto);
@@ -115,8 +113,8 @@
             }
             .about-dates {
                 div {
-                    min-width: 330px;
                     @include border (none, 0, transparent, none);
+                    min-width: 330px;
                     h2 {
                         font-size: 2rem;
                         top: 13px;

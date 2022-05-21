@@ -3,6 +3,10 @@
   padding-top: 12px;
   padding-bottom: 12px; }
 
+.span, .main-menu .menu-content h1 span, .main-rye div h1 span {
+  display: contents;
+  color: #c7c7c7; }
+
 .header-box {
   background-image: url(../imagen/encabezado.jpg);
   background-size: cover;
@@ -38,7 +42,7 @@
         .header-box nav div div ul li:last-of-type {
           border: none; }
         .header-box nav div div ul li a {
-          font-size: .8rem;
+          font-size: 0.8rem;
           color: #c7c7c7; }
           .header-box nav div div ul li a:hover {
             color: #94d56cd9; }
@@ -81,8 +85,8 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
             font-size: 1.3rem;
-            height: 100%;
-            color: #101010; } }
+            color: #101010;
+            height: 100%; } }
 
 @keyframes header {
   0% {
@@ -95,8 +99,8 @@ footer {
   height: 77px; }
   footer div p {
     margin: 0;
-    color: #c7c7c7;
-    font-size: .5rem; }
+    font-size: 0.5rem;
+    color: #c7c7c7; }
 
 .nav__list {
   list-style: none; }
@@ -191,8 +195,7 @@ footer {
         .main-conocenos div article div p {
           color: #101010;
           padding: 16px 22px;
-          margin-bottom: 0;
-          font-weight: bold; }
+          margin-bottom: 0; }
     .main-conocenos div .about-dates div {
       border: 4px solid #3c3b3b;
       border-radius: 0;
@@ -259,11 +262,11 @@ footer {
       .main-conocenos div article p {
         font-size: 1.2rem; }
     .main-conocenos div .about-dates div {
-      min-width: 330px;
       border: none;
       border-radius: 0;
       color: transparent;
-      background: none; }
+      background: none;
+      min-width: 330px; }
       .main-conocenos div .about-dates div h2 {
         font-size: 2rem;
         top: 13px; }
@@ -276,8 +279,6 @@ footer {
   background: #101010;
   height: calc(100vh - 154px);
   min-height: 1732px; }
-  .main-menu .gradient {
-    display: none; }
   .main-menu .menu-content {
     animation-name: left;
     animation-duration: 0.3s;
@@ -293,16 +294,13 @@ footer {
     .main-menu .menu-content h1 {
       font: normal bold 1.5rem 'Ubuntu', sans-serif;
       color: #c7c7c7; }
-      .main-menu .menu-content h1 span {
-        display: contents;
-        color: #c7c7c7; }
     .main-menu .menu-content section {
       padding: 0 12px 12px 12px;
       width: 100vw; }
       .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
         background-position: center center; }
         .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .burgers-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .drinks-bg h2, .main-menu .menu-content section .beer-bg h2 {
-          font: normal bold 1.5rem 'Ubuntu', sans-serif;
+          font: normal bold 1.2rem 'Ubuntu', sans-serif;
           text-shadow: none;
           padding-top: 8px; }
       .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .beer-bg h2 {
@@ -321,15 +319,15 @@ footer {
         background-image: url(../imagen/tragos.jpg); }
       .main-menu .menu-content section .beer-bg {
         background-image: url(../imagen/cerveza.jpg); }
-      .main-menu .menu-content section div {
+      .main-menu .menu-content section article {
         background-size: cover;
         height: 270px; }
-        .main-menu .menu-content section div:hover h2 {
+        .main-menu .menu-content section article:hover h2 {
           display: none; }
-        .main-menu .menu-content section div:hover div {
+        .main-menu .menu-content section article:hover div {
           display: flex;
           opacity: .9; }
-          .main-menu .menu-content section div:hover div ul {
+          .main-menu .menu-content section article:hover div ul {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -339,82 +337,28 @@ footer {
             font: normal normal .8rem/26px 'Ubuntu', sans-serif;
             list-style: none;
             width: 100%; }
-        .main-menu .menu-content section div div {
+        .main-menu .menu-content section article div {
           height: 100%;
           width: 100%;
           display: contents;
           background-color: #000000;
           opacity: 0;
           transition: opacity .8s; }
-          .main-menu .menu-content section div div ul {
+          .main-menu .menu-content section article div ul {
             display: none; }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-menu {
-    background: transparent;
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
     height: calc(100vh - 154px);
     min-height: 728px; }
-    .main-menu .gradient {
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: -1;
-      margin: 0;
-      padding: 0;
-      display: block;
-      height: calc(100vh - 154px);
-      min-height: 728px; }
-      .main-menu .gradient .gradient-1 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-menu .gradient .gradient-2 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-menu .gradient .gradient-3 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-menu .gradient .gradient-4 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-menu .gradient .gradient-1, .main-menu .gradient .gradient-4 {
-        height: 50%;
-        width: 50%;
-        margin: 0;
-        padding: 0;
-        background: #101010; }
-      .main-menu .gradient .gradient-2, .main-menu .gradient .gradient-3 {
-        height: 50%;
-        width: 50%;
-        margin: 0;
-        padding: 0;
-        background: #c7c7c7; }
     .main-menu .menu-content h1 {
       letter-spacing: 10px;
       text-shadow: none;
       color: #101010;
       font-weight: bold; }
       .main-menu .menu-content h1 span {
-        display: contents;
-        font-weight: bold;
-        color: #c7c7c7; }
+        font-weight: bold; }
     .main-menu .menu-content section {
       width: 100%;
       padding: 0;
@@ -423,88 +367,37 @@ footer {
       max-width: 650px; }
       .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
         background-size: contain; }
-      .main-menu .menu-content section div {
+      .main-menu .menu-content section article {
         height: 220px; }
       .main-menu .menu-content section .starters-menu {
-        border-top-left-radius: 5px; }
+        border-top-left-radius: 10px; }
         .main-menu .menu-content section .starters-menu div {
-          border-top-left-radius: 5px; }
+          border-top-left-radius: 10px; }
       .main-menu .menu-content section .burgers-menu {
-        border-top-right-radius: 5px; }
+        border-top-right-radius: 10px; }
         .main-menu .menu-content section .burgers-menu div {
-          border-top-right-radius: 5px; }
+          border-top-right-radius: 10px; }
       .main-menu .menu-content section .drinks-menu {
-        border-bottom-left-radius: 5px; }
+        border-bottom-left-radius: 10px; }
         .main-menu .menu-content section .drinks-menu div {
-          border-bottom-left-radius: 5px; }
+          border-bottom-left-radius: 10px; }
       .main-menu .menu-content section .beer-menu {
-        border-bottom-right-radius: 5px; }
+        border-bottom-right-radius: 10px; }
         .main-menu .menu-content section .beer-menu div {
-          border-bottom-right-radius: 5px; } }
+          border-bottom-right-radius: 10px; } }
 
 @media screen and (min-width: 992px) {
   .main-menu {
-    background: transparent;
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
     height: calc(100vh - 154px);
     min-height: 590px; }
-    .main-menu .gradient {
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: -1;
-      margin: 0;
-      padding: 0;
-      display: block;
-      height: calc(100vh - 154px);
-      min-height: 590px; }
-      .main-menu .gradient .gradient-1 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        z-index: -1;
-        background: linear-gradient(-45deg, #c7c7c7 43%, #101010 43%); }
-      .main-menu .gradient .gradient-2 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: 0;
-        left: auto;
-        z-index: -1;
-        background: linear-gradient(-135deg, #101010 43%, #c7c7c7 43%); }
-      .main-menu .gradient .gradient-3 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: auto;
-        left: auto;
-        z-index: -1;
-        background: linear-gradient(45deg, #101010 43%, #c7c7c7 43%); }
-      .main-menu .gradient .gradient-4 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: auto;
-        z-index: -1;
-        background: linear-gradient(135deg, #c7c7c7 43%, #101010 43%); }
-      .main-menu .gradient .gradient-1, .main-menu .gradient .gradient-2, .main-menu .gradient .gradient-3, .main-menu .gradient .gradient-4 {
-        height: 50%;
-        width: 50%;
-        margin: 0;
-        padding: 0; }
     .main-menu .menu-content h1 {
       font-size: 2rem;
-      letter-spacing: 8px;
-      text-shadow: none;
-      color: #c7c7c7; }
+      color: #101010;
+      letter-spacing: 14px;
+      text-shadow: none; }
       .main-menu .menu-content h1 span {
-        display: contents;
-        font-weight: bolder;
-        color: #101010; }
+        font-weight: bolder; }
     .main-menu .menu-content section {
       width: 100%;
       padding: 0;
@@ -513,33 +406,31 @@ footer {
       max-width: 1140px; }
       .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
         background-size: contain; }
-      .main-menu .menu-content section div {
+      .main-menu .menu-content section article {
         height: 256px; }
-        .main-menu .menu-content section div:hover div ul {
+        .main-menu .menu-content section article:hover div ul {
           font-size: 1rem; }
       .main-menu .menu-content section .starters-menu {
-        border-top-left-radius: 5px; }
+        border-top-left-radius: 10px; }
         .main-menu .menu-content section .starters-menu div {
-          border-top-left-radius: 5px; }
+          border-top-left-radius: 10px; }
       .main-menu .menu-content section .pizzas-menu {
-        border-top-right-radius: 5px; }
+        border-top-right-radius: 10px; }
         .main-menu .menu-content section .pizzas-menu div {
-          border-top-right-radius: 5px; }
+          border-top-right-radius: 10px; }
       .main-menu .menu-content section .desserts-menu {
-        border-bottom-left-radius: 5px; }
+        border-bottom-left-radius: 10px; }
         .main-menu .menu-content section .desserts-menu div {
-          border-bottom-left-radius: 5px; }
+          border-bottom-left-radius: 10px; }
       .main-menu .menu-content section .beer-menu {
-        border-bottom-right-radius: 5px; }
+        border-bottom-right-radius: 10px; }
         .main-menu .menu-content section .beer-menu div {
-          border-bottom-right-radius: 5px; } }
+          border-bottom-right-radius: 10px; } }
 
 .main-rye {
   background: #101010;
   height: calc(100vh - 154px);
   min-height: 1412px; }
-  .main-rye .gradient {
-    display: none; }
   .main-rye div h1 {
     font: normal bold 1.5rem 'Ubuntu', sans-serif;
     color: #c7c7c7; }
@@ -600,65 +491,13 @@ footer {
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .main-rye {
-    background: transparent;
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
     height: calc(100vh - 154px);
     min-height: 806px; }
-    .main-rye .gradient {
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: -1;
-      margin: 0;
-      padding: 0;
-      display: block;
-      height: calc(100vh - 154px);
-      min-height: 806px; }
-      .main-rye .gradient .gradient-1 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-2 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-3 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-4 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3, .main-rye .gradient .gradient-4 {
-        height: 50%;
-        width: 50%;
-        margin: 0;
-        padding: 0; }
-      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-4 {
-        background-color: #101010; }
-      .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3 {
-        background-color: #c7c7c7; }
     .main-rye div h1 {
-      color: #c7c7c7;
+      color: #101010;
       letter-spacing: 2px;
       text-shadow: none; }
-      .main-rye div h1 span {
-        color: #101010;
-        font-weight: bold; }
     .main-rye div section {
       height: fit-content;
       width: auto;
@@ -667,66 +506,14 @@ footer {
 
 @media screen and (min-width: 992px) {
   .main-rye {
-    background: transparent;
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
     height: calc(100vh - 154px);
     min-height: 788px; }
-    .main-rye .gradient {
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      z-index: -1;
-      margin: 0;
-      padding: 0;
-      display: block;
-      height: calc(100vh - 154px);
-      min-height: 788px; }
-      .main-rye .gradient .gradient-1 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-2 {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-3 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: auto;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-4 {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: auto;
-        z-index: -1; }
-      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3, .main-rye .gradient .gradient-4 {
-        height: 50%;
-        width: 50%;
-        margin: 0;
-        padding: 0; }
-      .main-rye .gradient .gradient-1, .main-rye .gradient .gradient-4 {
-        background-color: #101010; }
-      .main-rye .gradient .gradient-2, .main-rye .gradient .gradient-3 {
-        background-color: #c7c7c7; }
     .main-rye div h1 {
-      color: #c7c7c7;
       font-size: 2rem;
+      color: #101010;
       text-shadow: none;
       letter-spacing: 2px; }
-      .main-rye div h1 span {
-        color: #101010;
-        font-weight: bold; }
     .main-rye div section {
       height: fit-content;
       width: auto;
