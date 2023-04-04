@@ -1,0 +1,206 @@
+// mobile
+
+.main-menu {
+    @include main ( $black, calc(100vh - 154px), 1732px);
+    .menu-content {
+        @include animation (left, .3s, 1, forwards);
+        @include left-animation;
+        @extend .pad;
+        position: relative;
+        h1 {
+            font: normal bold 1.5rem 'Ubuntu', sans-serif;
+            color: $white;
+            span {
+                @extend .span;
+            }
+        }
+        section {
+            padding: 0 12px 12px 12px;
+            width: 100vw;
+            .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
+                background-position: center center;
+                h2 {
+                    font: normal bold 1.2rem 'Ubuntu', sans-serif;
+                    text-shadow: none;
+                    padding-top: 8px;
+                }
+            }
+            .starters-bg, .pizzas-bg, .desserts-bg, .beer-bg {
+                h2 {
+                    color: $white2;
+                }
+            }
+            .burgers-bg, .drinks-bg {
+                h2 {
+                    color: $black2;
+                }
+            }
+            .starters-bg {
+                background-image: map-get($bg, starters);
+            }
+            .burgers-bg {
+                background-image: map-get($bg, burgers);
+            }
+            .pizzas-bg {
+                background-image: map-get($bg, pizzas);
+            }
+            .desserts-bg {
+                background-image: map-get($bg, desserts);
+            }
+            .drinks-bg {
+                background-image: map-get($bg, drinks);                
+            }
+            .beer-bg {
+                background-image: map-get($bg, beer);
+            }
+            article {
+                background-size: cover;
+                height: 270px;
+                &:hover {
+                    h2 {
+                        display: none;
+                    }
+                    div {
+                        display: flex;
+                        opacity: .9;
+                        ul {
+                            @include flex (flex, column, center, center);
+                            @include not-mp;
+                            font: normal normal .8rem/26px 'Ubuntu', sans-serif;
+                            list-style: none;
+                            width: 100%; 
+                        }
+                    }
+                }
+                div {
+                    @include size (100%, 100%);
+                    display: contents;
+                    background-color: #000000;
+                    opacity: 0;
+                    transition: opacity .8s;
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tablet
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    .main-menu {
+        @include main ($gradient, calc(100vh - 154px), 728px);
+        .menu-content {
+            h1 {
+                letter-spacing: 10px;
+                text-shadow: none;
+                color: $black;
+                font-weight: bold;
+                span {
+                    font-weight: bold;
+                }
+            }
+            section {
+                width: 100%;
+                padding: 0;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
+                max-width: 650px;
+                .starters-bg, .burgers-bg, .pizzas-bg, .desserts-bg, .drinks-bg, .beer-bg {
+                    background-size: contain;
+                }
+                article {
+                    height: 220px;
+                }
+                .starters-menu {
+                    border-top-left-radius: 10px;
+                    div {
+                        border-top-left-radius: 10px;
+                    }
+                }
+                .burgers-menu {
+                    border-top-right-radius: 10px;
+                    div {
+                        border-top-right-radius: 10px;
+                    }
+                }
+                .drinks-menu {
+                    border-bottom-left-radius: 10px;
+                    div {
+                        border-bottom-left-radius: 10px;
+                    }
+                }
+                .beer-menu {
+                    border-bottom-right-radius: 10px;
+                    div {
+                        border-bottom-right-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// desktop
+
+@media screen and (min-width:992px) {
+    .main-menu {
+        @include main ($gradient, calc(100vh - 154px), 590px);
+        .menu-content {
+            h1 {
+                @include font (2rem, $black);
+                letter-spacing: 14px;
+                text-shadow: none;
+                span {
+                    font-weight: bolder;
+                }
+            }
+            section {
+                width: 100%;
+                padding: 0;
+                border-radius: 10px;
+                box-shadow: $boxshadow;
+                max-width: 1140px;
+                .starters-bg, .burgers-bg , .pizzas-bg , .desserts-bg , .drinks-bg , .beer-bg  {
+                    background-size: contain;
+                }
+                article {
+                    height: 256px;
+                    &:hover {
+                        div {
+                            ul {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .starters-menu {
+                    border-top-left-radius: 10px;
+                    div {
+                        border-top-left-radius: 10px;
+                    }
+                }
+                .pizzas-menu {
+                    border-top-right-radius: 10px;
+                    div {
+                        border-top-right-radius: 10px;
+                    }
+                }
+                .desserts-menu {
+                    border-bottom-left-radius: 10px;
+                    div {
+                        border-bottom-left-radius: 10px;
+                    }
+                }
+                .beer-menu {
+                    border-bottom-right-radius: 10px;
+                    div {
+                        border-bottom-right-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@mixin flex ($display, $direction, $align, $justify){
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin main ($background, $height, $min-height){
+    background: $background;
+    height: $height;
+    min-height: $min-height;
+}
+
+@mixin animation ($name, $duration, $iteration, $fill){
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: $iteration;
+    animation-fill-mode: $fill;
+}
+
+@mixin size ($h, $w){
+    height: $h;
+    width: $w;
+}
+
+@mixin position ($position, $top, $right, $bottom, $left, $z-index){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin not-mp {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin border ($border, $b-radius, $color, $background){
+    border: $border;
+    border-radius: $b-radius;
+    color: $color;
+    background: $background;
+}
+
+@mixin left-animation {
+    @keyframes left {
+        0%{
+            left: -1000px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+}
+
+@mixin font-animation {
+    @keyframes font {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+@mixin font ($size, $color) {
+    font-size: $size;
+    color: $color;
+}

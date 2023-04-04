@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Si estas pensando en organizar un evento o pasar un rato increible, Panda es la mejor opción! Hace tu reserva aquí.">
+    <meta name="keywords" content="PANDA, BAR, RESERVAS, EVENTOS">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Reservas y Eventos</title>
+    <link rel="icon" href="../imagen/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="conteiner-fluid vh-100">
+        <header class="row m-0">
+            <div class="col header-box">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-1">
+                        <img class="navbar-brand desktop-icon" src="../imagen/menu-icon.svg" alt="Icono-del-Menu">
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="./conocenos.html">Conocenos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="./menu.html">Menú</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="./reservas-eventos.html">Reservas Y Eventos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="./socios.html">Socios</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </nav>
+            </div>
+        </header>
+        <main class="row m-0 main-rye">
+            <div class="col d-flex flex-column justify-content-center align-items-center h-100 pad">
+                <h1><span>Hace tu</span> reserva</span></h1>
+                <section class="row align-items-center gy-3">
+                    <form class="col-12 col-sm-6 col-lg-12">
+                        <div class="row">
+                            <div class="col-12 col-lg-12">
+                                <h2 class="text-center fw-bold">RESERVAS</h2>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-name" class="fw-bold form-label">Nombre y Apellido</label>
+                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" name="reserve-name">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-tel" class="fw-bold form-label">Número de Teléfono</label>
+                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" name="reserve-tel">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-email" class="fw-bold form-label">Email</label>
+                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" name="reserve-email">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-day" class="fw-bold form-label">Fecha</label>
+                                <input type="date" required class="text-center fw-bold form-control" name="reserve-day">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-time" class="fw-bold form-label">Horario</label>
+                                <input type="time" required class="text-center fw-bold form-control" name="reserve-time">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="reserve-persons" class="fw-bold form-label">Cantidad de Personas</label>
+                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" name="reserve-persons">
+                            </div>
+                            <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+                                <button type="submit" class="fw-bold">Solicitar Reserva</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="col-12 col-sm-6 col-lg-12 event-form">
+                        <div class="row">
+                            <div class="col-12 col-lg-12">
+                                <h2 class="text-center fw-bold">EVENTOS</h2>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-name" class="fw-bold form-label">Nombre y Apellido</label>
+                                <input type="text" placeholder="Nombre Apellido" required class="text-center fw-bold form-control" name="event-name">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-tel" class="fw-bold form-label">Número de Teléfono</label>
+                                <input type="tel" placeholder="xxx-xxxxxxxxxx" required class="text-center fw-bold form-control" pattern="([0-9]{3})[-][0-9]{10}" name="event-tel">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-email" class="fw-bold form-label">Email</label>
+                                <input type="email" placeholder="Example@example.com" required class="text-center fw-bold form-control" name="event-email">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-company" class="fw-bold form-label">Empresa</label>
+                                <input type="text" placeholder="Empresa" required  class="text-center fw-bold form-control" name="event-company">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-day" class="fw-bold form-label">Fecha</label>
+                                <input type="date" required class="text-center fw-bold form-control" name="event-day">
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3">
+                                <label for="event-time" class="fw-bold form-label">Horario</label>
+                                <input type="time" required class="text-center fw-bold form-control" name="event-time">
+                            </div>
+                            <div class="col-12 col-lg-12 d-flex flex-column align-items-center mb-3">
+                                <label for="event-persons" class="fw-bold form-label">Cantidad de Personas</label>
+                                <input type="number" placeholder="xx" required class="text-center fw-bold form-control" name="event-persons">
+                            </div>
+                            <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+                                <button type="submit" class="fw-bold">Solicitar Evento</button>
+                            </div>
+                        </div>
+                    </form>
+                </section> 
+            </div>
+        </main>
+        <footer class="row m-0">
+            <div class="col d-flex flex-column justify-content-evenly">
+                <nav class="row">
+                    <ul class="mb-0 mt-1 d-flex justify-content-evenly nav__list">
+                        <li><a href="#" class="logo-instagram"></a></li>
+                        <li><a href="#" class="logo-facebook"></a></li>
+                        <li><a href="#" class="logo-twitter"></a></li>
+                    </ul>
+                </nav>
+                <p class="row justify-content-center fw-bold">Copyright derechos reservados Panda Bar SA</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

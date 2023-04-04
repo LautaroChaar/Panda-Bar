@@ -1,0 +1,116 @@
+// mobile
+
+.main-rye {
+    @include main ( $black, calc(100vh - 154px), 1412px);
+    .pad {
+        @extend .pad;
+    }
+    div {
+        h1 {
+            font: normal bold 1.5rem 'Ubuntu', sans-serif;
+            color: $white;
+            span {
+                @extend .span;
+            }
+        }
+        section {
+            @include border (6px double $green, 0, transparent, $grey);
+            margin: 10px 0;
+            max-width: 410px;
+            padding: 10px 0;
+            form {
+                margin-bottom: 16px;
+                div {
+                    @include animation (font, 1s, 1, forwards);
+                    @include font-animation;
+                    div {
+                        h2 {
+                            @include font (1.2rem, $white2);
+                        }
+                    }
+                    div {
+                        label {
+                            color: $green;
+                        }
+                        input {
+                            @include border (transparent, 3px, $border, transparent);
+                            border-bottom: 2px solid $border;
+                            max-width: 210px;
+                            &::placeholder { 
+                                color: $border;
+                            }
+                            &:focus {
+                                @include border (transparent, 3px, $white, transparent);
+                                box-shadow: none;
+                                border-bottom: 2px solid $orange;
+                            }
+                        }
+                        button {
+                            @include border (none, 12px, $grey, $border);
+                            padding: 2px 8px;
+                            cursor: pointer;
+                            &:hover {
+                                @include border (none, 12px, $orange, $grey);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tablet
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    .main-rye {
+        @include main ($gradient, calc(100vh - 154px), 806px);
+        div {
+            h1 {
+                color: $black;
+                letter-spacing: 2px;
+                text-shadow: none;
+            }
+            section {
+                @include size (fit-content, auto);
+                box-shadow: $boxshadow;
+                max-width: 670px;
+            }
+        }
+    }
+}
+
+// desktop
+
+@media screen and (min-width:992px) {
+    .main-rye {
+        @include main ($gradient, calc(100vh - 154px), 788px);
+        div {
+            h1 {
+                @include font (2rem, $black);
+                text-shadow: none;
+                letter-spacing: 2px;
+            }
+            section {
+                @include size (fit-content, auto);
+                box-shadow: $boxshadow;
+                max-width: 1300px;
+                form {
+                    div {
+                        div {
+                            h2 {
+                                font-size: 1.4rem;
+                            }
+                            label, input {
+                                font-size: 1.2rem;
+                            }
+                            input {
+                                max-width: 310px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

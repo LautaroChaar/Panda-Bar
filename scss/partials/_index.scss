@@ -1,0 +1,75 @@
+// mobile
+
+.main-index {
+    @include main ( url(../imagen/fondo.jpg), calc(100vh - 154px), 326px);
+    background-size: cover;
+    padding: 12px 0;
+    div {
+        p {
+            text-shadow: $textshadow;
+            color: $white2;
+        }
+        img {
+            @include animation (panda, 10s, infinite, none);
+            @include size (calc(100% - 60%), calc(100% - 30%));
+            object-fit: contain;
+        }
+        h1 {
+            @include font (4rem, $white2);
+        }
+    }
+}
+
+@keyframes panda {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    75%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+// tablet
+
+@media screen and (min-width: 480px) and (max-width:991px) {
+    .main-index {
+        div {
+            p {
+                font-size: 1.2rem;
+            }
+            img {
+                width: calc(100% - 60%);
+            }
+            h1 {
+                font-size: 4.5rem;
+            }
+        }
+    } 
+}
+
+// desktop
+
+@media screen and (min-width:992px) {
+    .main-index {
+        div {
+            p {
+                font-size: 1.5rem;
+            }
+            img {
+                width: calc(100% - 60%);
+            }
+            h1 {
+                font-size: 5rem;
+            }
+        }
+    }
+}

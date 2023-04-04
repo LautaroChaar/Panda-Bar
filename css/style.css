@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.pad, .main-menu .menu-content, .main-rye .pad {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+.span, .main-menu .menu-content h1 span, .main-rye div h1 span {
+  display: contents;
+  color: #c7c7c7; }
+
+.header-box {
+  background-image: url(../imagen/encabezado.jpg);
+  background-size: cover;
+  border-bottom: 6px solid #000000; }
+  .header-box nav div .desktop-icon {
+    width: 30px; }
+  .header-box nav div button {
+    border: 2px solid #000000; }
+    .header-box nav div button:focus {
+      border: none; }
+    .header-box nav div button span {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0,0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  .header-box nav div div {
+    height: 100vh;
+    width: 45%;
+    position: fixed;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 6;
+    background-color: #101010;
+    border-right: 4px solid #94d56cd9; }
+    .header-box nav div div ul {
+      height: 100vh; }
+      .header-box nav div div ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        border-bottom: 4px solid #94d56cd9; }
+        .header-box nav div div ul li:last-of-type {
+          border: none; }
+        .header-box nav div div ul li a {
+          font-size: 0.8rem;
+          color: #c7c7c7; }
+          .header-box nav div div ul li a:hover {
+            color: #94d56cd9; }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .header-box nav div div ul li a {
+    font-size: 1.2rem; } }
+
+@media screen and (min-width: 992px) {
+  .header-box {
+    background-image: none;
+    background-color: #e8e8e8; }
+    .header-box nav div div {
+      height: auto;
+      width: 100%;
+      position: inherit;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      z-index: 0;
+      background-color: transparent;
+      min-height: 0;
+      border-right: none; }
+      .header-box nav div div ul {
+        height: auto;
+        min-height: 0; }
+        .header-box nav div div ul li {
+          border: none;
+          height: auto; }
+          .header-box nav div div ul li a {
+            position: relative;
+            top: -100px;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            z-index: auto;
+            animation-name: header;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            font-size: 1.3rem;
+            color: #101010;
+            height: 100%; } }
+
+@keyframes header {
+  0% {
+    top: -100px; }
+  100% {
+    top: 0; } }
+
+footer {
+  border-top: 6px solid #c7c7c7;
+  height: 77px; }
+  footer div p {
+    margin: 0;
+    font-size: 0.5rem;
+    color: #c7c7c7; }
+
+.nav__list {
+  list-style: none; }
+  .nav__list li .logo-instagram::before {
+    content: url(../imagen/instagram5.png); }
+  .nav__list li .logo-facebook::before {
+    content: url(../imagen/facebook-.png); }
+  .nav__list li .logo-twitter::before {
+    content: url(../imagen/gorjeo.png); }
+
+.main-index {
+  background: url(../imagen/fondo.jpg);
+  height: calc(100vh - 154px);
+  min-height: 326px;
+  background-size: cover;
+  padding: 12px 0; }
+  .main-index div p {
+    text-shadow: 3px 2px #000000;
+    color: #ffffffd4; }
+  .main-index div img {
+    animation-name: panda;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    height: calc(100% - 60%);
+    width: calc(100% - 30%);
+    object-fit: contain; }
+  .main-index div h1 {
+    font-size: 4rem;
+    color: #ffffffd4; }
+
+@keyframes panda {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(360deg); }
+  50% {
+    transform: rotate(360deg); }
+  75% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  .main-index div p {
+    font-size: 1.2rem; }
+  .main-index div img {
+    width: calc(100% - 60%); }
+  .main-index div h1 {
+    font-size: 4.5rem; } }
+
+@media screen and (min-width: 992px) {
+  .main-index div p {
+    font-size: 1.5rem; }
+  .main-index div img {
+    width: calc(100% - 60%); }
+  .main-index div h1 {
+    font-size: 5rem; } }
+
+.main-conocenos {
+  background: #101010;
+  height: calc(100vh - 154px);
+  min-height: 1676px;
+  padding: 12px 0; }
+  .main-conocenos div {
+    animation-name: left;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
+    .main-conocenos div article {
+      width: 304px; }
+      .main-conocenos div article h1 {
+        font: normal bold 1.5rem 'Ubuntu', sans-serif;
+        color: #c7c7c7; }
+      .main-conocenos div article div {
+        border: 4px solid #3c3b3b;
+        border-radius: 10px;
+        color: transparent;
+        background: #c7c7c7; }
+        .main-conocenos div article div img {
+          height: 300px;
+          width: auto;
+          padding: 16px;
+          filter: drop-shadow(4px 6px 2px #000000); }
+        .main-conocenos div article div p {
+          color: #101010;
+          padding: 16px 22px;
+          margin-bottom: 0; }
+    .main-conocenos div .about-dates div {
+      border: 4px solid #3c3b3b;
+      border-radius: 0;
+      color: transparent;
+      background: linear-gradient(-45deg, #c7c7c7 10%, #101010 10%, #101010 90%, #c7c7c7 90%);
+      height: 100px; }
+      .main-conocenos div .about-dates div h2 {
+        position: relative;
+        top: 12px;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: 2;
+        font-size: 1.5rem;
+        color: #94d56cd9; }
+      .main-conocenos div .about-dates div p {
+        position: relative;
+        top: -14px;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: auto;
+        color: #c7c7c7;
+        font-weight: 500;
+        opacity: 0; }
+      .main-conocenos div .about-dates div h2, .main-conocenos div .about-dates div p {
+        transition: opacity .5s; }
+      .main-conocenos div .about-dates div:hover h2 {
+        opacity: 0; }
+      .main-conocenos div .about-dates div:hover p {
+        opacity: 1;
+        z-index: 4; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 38px; }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .main-conocenos {
+    min-height: 1042px;
+    line-height: initial; }
+    .main-conocenos div article {
+      width: 552px; }
+    .main-conocenos div .about-dates div {
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background: none;
+      min-width: 268px; }
+      .main-conocenos div .about-dates div h2 {
+        font-size: 1.5rem;
+        top: 9px; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 28px; } }
+
+@media screen and (min-width: 992px) {
+  .main-conocenos {
+    min-height: 1028px;
+    line-height: initial; }
+    .main-conocenos div article {
+      min-width: 992px;
+      max-width: 1300px;
+      width: auto; }
+      .main-conocenos div article h1 {
+        font-size: 2rem; }
+      .main-conocenos div article p {
+        font-size: 1.2rem; }
+    .main-conocenos div .about-dates div {
+      border: none;
+      border-radius: 0;
+      color: transparent;
+      background: none;
+      min-width: 330px; }
+      .main-conocenos div .about-dates div h2 {
+        font-size: 2rem;
+        top: 13px; }
+      .main-conocenos div .about-dates div p {
+        font-size: 1.2rem; }
+    .main-conocenos div .about-dates .days h2 {
+      top: 36px; } }
+
+.main-menu {
+  background: #101010;
+  height: calc(100vh - 154px);
+  min-height: 1732px; }
+  .main-menu .menu-content {
+    animation-name: left;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
+    .main-menu .menu-content h1 {
+      font: normal bold 1.5rem 'Ubuntu', sans-serif;
+      color: #c7c7c7; }
+    .main-menu .menu-content section {
+      padding: 0 12px 12px 12px;
+      width: 100vw; }
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
+        background-position: center center; }
+        .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .burgers-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .drinks-bg h2, .main-menu .menu-content section .beer-bg h2 {
+          font: normal bold 1.2rem 'Ubuntu', sans-serif;
+          text-shadow: none;
+          padding-top: 8px; }
+      .main-menu .menu-content section .starters-bg h2, .main-menu .menu-content section .pizzas-bg h2, .main-menu .menu-content section .desserts-bg h2, .main-menu .menu-content section .beer-bg h2 {
+        color: #ffffffd4; }
+      .main-menu .menu-content section .burgers-bg h2, .main-menu .menu-content section .drinks-bg h2 {
+        color: #040404c7; }
+      .main-menu .menu-content section .starters-bg {
+        background-image: url(../imagen/entradas.jpg); }
+      .main-menu .menu-content section .burgers-bg {
+        background-image: url(../imagen/hamburguesa.jpg); }
+      .main-menu .menu-content section .pizzas-bg {
+        background-image: url(../imagen/pizza.jpg); }
+      .main-menu .menu-content section .desserts-bg {
+        background-image: url(../imagen/postres.png); }
+      .main-menu .menu-content section .drinks-bg {
+        background-image: url(../imagen/tragos.jpg); }
+      .main-menu .menu-content section .beer-bg {
+        background-image: url(../imagen/cerveza.jpg); }
+      .main-menu .menu-content section article {
+        background-size: cover;
+        height: 270px; }
+        .main-menu .menu-content section article:hover h2 {
+          display: none; }
+        .main-menu .menu-content section article:hover div {
+          display: flex;
+          opacity: .9; }
+          .main-menu .menu-content section article:hover div ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font: normal normal .8rem/26px 'Ubuntu', sans-serif;
+            list-style: none;
+            width: 100%; }
+        .main-menu .menu-content section article div {
+          height: 100%;
+          width: 100%;
+          display: contents;
+          background-color: #000000;
+          opacity: 0;
+          transition: opacity .8s; }
+          .main-menu .menu-content section article div ul {
+            display: none; }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .main-menu {
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
+    height: calc(100vh - 154px);
+    min-height: 728px; }
+    .main-menu .menu-content h1 {
+      letter-spacing: 10px;
+      text-shadow: none;
+      color: #101010;
+      font-weight: bold; }
+      .main-menu .menu-content h1 span {
+        font-weight: bold; }
+    .main-menu .menu-content section {
+      width: 100%;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
+      max-width: 650px; }
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
+        background-size: contain; }
+      .main-menu .menu-content section article {
+        height: 220px; }
+      .main-menu .menu-content section .starters-menu {
+        border-top-left-radius: 10px; }
+        .main-menu .menu-content section .starters-menu div {
+          border-top-left-radius: 10px; }
+      .main-menu .menu-content section .burgers-menu {
+        border-top-right-radius: 10px; }
+        .main-menu .menu-content section .burgers-menu div {
+          border-top-right-radius: 10px; }
+      .main-menu .menu-content section .drinks-menu {
+        border-bottom-left-radius: 10px; }
+        .main-menu .menu-content section .drinks-menu div {
+          border-bottom-left-radius: 10px; }
+      .main-menu .menu-content section .beer-menu {
+        border-bottom-right-radius: 10px; }
+        .main-menu .menu-content section .beer-menu div {
+          border-bottom-right-radius: 10px; } }
+
+@media screen and (min-width: 992px) {
+  .main-menu {
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
+    height: calc(100vh - 154px);
+    min-height: 590px; }
+    .main-menu .menu-content h1 {
+      font-size: 2rem;
+      color: #101010;
+      letter-spacing: 14px;
+      text-shadow: none; }
+      .main-menu .menu-content h1 span {
+        font-weight: bolder; }
+    .main-menu .menu-content section {
+      width: 100%;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
+      max-width: 1140px; }
+      .main-menu .menu-content section .starters-bg, .main-menu .menu-content section .burgers-bg, .main-menu .menu-content section .pizzas-bg, .main-menu .menu-content section .desserts-bg, .main-menu .menu-content section .drinks-bg, .main-menu .menu-content section .beer-bg {
+        background-size: contain; }
+      .main-menu .menu-content section article {
+        height: 256px; }
+        .main-menu .menu-content section article:hover div ul {
+          font-size: 1rem; }
+      .main-menu .menu-content section .starters-menu {
+        border-top-left-radius: 10px; }
+        .main-menu .menu-content section .starters-menu div {
+          border-top-left-radius: 10px; }
+      .main-menu .menu-content section .pizzas-menu {
+        border-top-right-radius: 10px; }
+        .main-menu .menu-content section .pizzas-menu div {
+          border-top-right-radius: 10px; }
+      .main-menu .menu-content section .desserts-menu {
+        border-bottom-left-radius: 10px; }
+        .main-menu .menu-content section .desserts-menu div {
+          border-bottom-left-radius: 10px; }
+      .main-menu .menu-content section .beer-menu {
+        border-bottom-right-radius: 10px; }
+        .main-menu .menu-content section .beer-menu div {
+          border-bottom-right-radius: 10px; } }
+
+.main-rye {
+  background: #101010;
+  height: calc(100vh - 154px);
+  min-height: 1412px; }
+  .main-rye div h1 {
+    font: normal bold 1.5rem 'Ubuntu', sans-serif;
+    color: #c7c7c7; }
+  .main-rye div section {
+    border: 6px double #94d56cd9;
+    border-radius: 0;
+    color: transparent;
+    background: #1b1b1b;
+    margin: 10px 0;
+    max-width: 410px;
+    padding: 10px 0; }
+    .main-rye div section form {
+      margin-bottom: 16px; }
+      .main-rye div section form div {
+        animation-name: font;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+
+@keyframes font {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+        .main-rye div section form div div h2 {
+          font-size: 1.2rem;
+          color: #ffffffd4; }
+        .main-rye div section form div div label {
+          color: #94d56cd9; }
+        .main-rye div section form div div input {
+          border: transparent;
+          border-radius: 3px;
+          color: #3c3b3b;
+          background: transparent;
+          border-bottom: 2px solid #3c3b3b;
+          max-width: 210px; }
+          .main-rye div section form div div input::placeholder {
+            color: #3c3b3b; }
+          .main-rye div section form div div input:focus {
+            border: transparent;
+            border-radius: 3px;
+            color: #c7c7c7;
+            background: transparent;
+            box-shadow: none;
+            border-bottom: 2px solid #ae7e5c; }
+        .main-rye div section form div div button {
+          border: none;
+          border-radius: 12px;
+          color: #1b1b1b;
+          background: #3c3b3b;
+          padding: 2px 8px;
+          cursor: pointer; }
+          .main-rye div section form div div button:hover {
+            border: none;
+            border-radius: 12px;
+            color: #ae7e5c;
+            background: #1b1b1b; }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .main-rye {
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
+    height: calc(100vh - 154px);
+    min-height: 806px; }
+    .main-rye div h1 {
+      color: #101010;
+      letter-spacing: 2px;
+      text-shadow: none; }
+    .main-rye div section {
+      height: fit-content;
+      width: auto;
+      box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
+      max-width: 670px; } }
+
+@media screen and (min-width: 992px) {
+  .main-rye {
+    background: linear-gradient(90deg, #101010 50%, #c7c7c7 50%);
+    height: calc(100vh - 154px);
+    min-height: 788px; }
+    .main-rye div h1 {
+      font-size: 2rem;
+      color: #101010;
+      text-shadow: none;
+      letter-spacing: 2px; }
+    .main-rye div section {
+      height: fit-content;
+      width: auto;
+      box-shadow: #000000 0 10px 20px, #000000 0 6px 6px;
+      max-width: 1300px; }
+      .main-rye div section form div div h2 {
+        font-size: 1.4rem; }
+      .main-rye div section form div div label, .main-rye div section form div div input {
+        font-size: 1.2rem; }
+      .main-rye div section form div div input {
+        max-width: 310px; } }
+
+.main-socios {
+  background: #101010;
+  height: calc(100vh - 154px);
+  min-height: 1070px;
+  padding: 12px 0; }
+  .main-socios div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .main-socios div article {
+      animation-name: left;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      position: relative;
+      width: 304px; }
+
+@keyframes left {
+  0% {
+    left: -1000px; }
+  100% {
+    left: 0; } }
+      .main-socios div article h1 {
+        font: normal bold 1.5rem 'Ubuntu', sans-serif;
+        color: #c7c7c7; }
+      .main-socios div article p {
+        padding: 10px; }
+      .main-socios div article ul {
+        padding: 12px 26px;
+        list-style: none; }
+        .main-socios div article ul li::before {
+          content: url(../imagen/icon.png); }
+      .main-socios div article p, .main-socios div article ul {
+        border: 4px solid #3c3b3b;
+        border-radius: 10px;
+        color: #101010;
+        background: #c7c7c7;
+        font-weight: bold;
+        max-width: 430px; }
+    .main-socios div form {
+      border: 6px double #94d56cd9;
+      border-radius: 0;
+      color: transparent;
+      background: #1b1b1b;
+      max-width: 304px;
+      box-shadow: #000000 0 10px 20px, #000000 0 6px 6px; }
+      .main-socios div form div {
+        animation-name: font;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; }
+
+@keyframes font {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+        .main-socios div form div h2 {
+          font-size: 1.2rem;
+          color: #ffffffd4; }
+        .main-socios div form div label {
+          color: #94d56cd9; }
+        .main-socios div form div input {
+          border: transparent;
+          border-radius: 3px;
+          color: #3c3b3b;
+          background: transparent;
+          border-bottom: 2px solid #3c3b3b;
+          max-width: 210px; }
+          .main-socios div form div input::placeholder {
+            color: #3c3b3b; }
+          .main-socios div form div input:focus {
+            border: transparent;
+            border-radius: 0;
+            color: #c7c7c7;
+            background: transparent;
+            box-shadow: none;
+            border-bottom: 2px solid #ae7e5c; }
+        .main-socios div form div button {
+          border: none;
+          border-radius: 12px;
+          color: #1b1b1b;
+          background: #3c3b3b;
+          padding: 2px 8px;
+          cursor: pointer; }
+          .main-socios div form div button:hover {
+            border: none;
+            border-radius: 12px;
+            color: #ae7e5c;
+            background: #1b1b1b; }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .main-socios {
+    min-height: 900px; }
+    .main-socios div article h1 {
+      font-size: 1.5rem; }
+    .main-socios div article p, .main-socios div article ul {
+      max-width: 760px; }
+    .main-socios div article ul {
+      list-style: none; }
+      .main-socios div article ul li::before {
+        content: url(../imagen/icon.png); }
+    .main-socios div article, .main-socios div form {
+      max-width: 544px; } }
+
+@media screen and (min-width: 992px) {
+  .main-socios {
+    min-height: 558px; }
+    .main-socios div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly; }
+      .main-socios div article {
+        width: 668px; }
+        .main-socios div article h1 {
+          font-size: 2rem; }
+        .main-socios div article p, .main-socios div article ul {
+          font-size: 1.2rem;
+          max-width: 600px; }
+        .main-socios div article ul {
+          list-style: none; }
+          .main-socios div article ul li::before {
+            content: url(../imagen/icon.png); }
+      .main-socios div form div h2 {
+        font-size: 1.4rem; }
+      .main-socios div form div label, .main-socios div form div input {
+        font-size: 1.2rem; }
+      .main-socios div form div input {
+        max-width: 250px; } }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #101010;
+  font-family: 'Ubuntu', sans-serif; }
